@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AM Living Fit - Take Our Quiz</title>
+
+    <!-- Link to Font Awesome for social media icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* Reuse existing styles */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        header, footer {
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        /* Quiz Section */
+        .quiz-section {
+            padding: 50px;
+            text-align: center;
+            background-color: #f4f7f6;
+        }
+
+        .quiz-section h2 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .quiz-section form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .quiz-question {
+            margin-bottom: 20px;
+        }
+
+        .quiz-question label {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .quiz-question select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .submit-btn {
+            background-color: #8e44ad;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <div class="logo-container">
+                <a href="index.html"><img src="file:///C:/Users/Meow/Desktop/AMLiving/amliving%20html/AMlogo.png" alt="AM Living Fit Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item">Home</a></li>
+                <li><a href="bio.html" class="nav-item">Bio</a></li>
+                <li><a href="packages.html" class="nav-item">Packages</a></li>
+                <li><a href="mission.html" class="nav-item">Mission</a></li>
+                <li><a href="quiz.html" class="nav-item">Quiz</a></li>
+                <li><a href="register.html" class="nav-item">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Take Our Quiz</h1>
+        <p>Answer these questions to receive personalized fitness and health recommendations!</p>
+    </section>
+
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <h2>Your Health, Your Plan</h2>
+        <form>
+            <!-- Questions -->
+            <div class="quiz-question">
+                <label for="goal">1. What is your primary fitness goal?</label>
+                <select id="goal" name="goal">
+                    <option value="weight_loss">Weight Loss</option>
+                    <option value="muscle_gain">Muscle Gain</option>
+                    <option value="endurance">Endurance</option>
+                    <option value="general_health">General Health</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="age">2. What is your age range?</label>
+                <select id="age" name="age">
+                    <option value="under_18">Under 18</option>
+                    <option value="18-25">18-25</option>
+                    <option value="26-40">26-40</option>
+                    <option value="41-60">41-60</option>
+                    <option value="above_60">Above 60</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="fitness_level">3. What is your current fitness level?</label>
+                <select id="fitness_level" name="fitness_level">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="time_commitment">4. How many hours per week can you commit to exercise?</label>
+                <select id="time_commitment" name="time_commitment">
+                    <option value="1-3">1-3 Hours</option>
+                    <option value="4-6">4-6 Hours</option>
+                    <option value="7+">7+ Hours</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="dietary_preferences">5. Do you have any dietary preferences or restrictions?</label>
+                <select id="dietary_preferences" name="dietary_preferences">
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="paleo">Paleo</option>
+                    <option value="none">None</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="medical_conditions">6. Do you have any medical conditions?</label>
+                <select id="medical_conditions" name="medical_conditions">
+                    <option value="none">None</option>
+                    <option value="diabetes">Diabetes</option>
+                    <option value="heart_disease">Heart Disease</option>
+                    <option value="joint_issues">Joint Issues</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="activity_preference">7. What type of activities do you prefer?</label>
+                <select id="activity_preference" name="activity_preference">
+                    <option value="gym_workouts">Gym Workouts</option>
+                    <option value="outdoor">Outdoor Activities</option>
+                    <option value="home_workouts">Home Workouts</option>
+                    <option value="team_sports">Team Sports</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="motivation">8. What motivates you the most?</label>
+                <select id="motivation" name="motivation">
+                    <option value="improving_health">Improving Health</option>
+                    <option value="appearance">Appearance</option>
+                    <option value="competition">Competition</option>
+                    <option value="stress_relief">Stress Relief</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="workout_frequency">9. How often do you currently work out?</label>
+                <select id="workout_frequency" name="workout_frequency">
+                    <option value="never">Never</option>
+                    <option value="1-2_times">1-2 Times Per Week</option>
+                    <option value="3-5_times">3-5 Times Per Week</option>
+                    <option value="daily">Daily</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="preferred_schedule">10. What is your preferred workout schedule?</label>
+                <select id="preferred_schedule" name="preferred_schedule">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="flexible">Flexible</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit Quiz</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media-links">
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
+
+This page keeps the existing gradient, footer, header, and theme from your homepage. The quiz allows users to answer 10 questions, and results can later be processed via form submission.
