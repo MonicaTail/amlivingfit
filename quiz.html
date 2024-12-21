@@ -362,10 +362,20 @@
             </label>
         </div>
 
-<!-- Submit Quiz Button (With JavaScript for handling before navigation) -->
+<!-- Submit Quiz Button (Above Start Your Journey) -->
 <a href="javascript:void(0);" class="cta-btn" onclick="handleSubmit(); window.location.href='packages.html';">
     <span class="icon"><i class="fas fa-heart"></i></span> Submit Quiz
 </a>
+
+<script>
+    function handleSubmit() {
+        // Perform any validation or actions needed when submitting the quiz
+        console.log("Quiz submitted!");
+        
+        // Optionally show a confirmation message or handle other logic
+        alert("Quiz Submitted! You will be redirected to the Packages Page.");
+    }
+</script>
 
 <!-- Start Your Journey Section (with Icon and Same Behavior) -->
 <a href="start-journey.html" class="cta-btn">
