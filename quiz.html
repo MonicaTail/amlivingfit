@@ -212,32 +212,237 @@
     </style>
 </head>
 
-<script>
-    function handleSubmit() {
-        // Get the values of the selected answers
-        const medicalConditions = document.getElementById('medical-conditions').value;
-        const fitnessLevel = document.getElementById('fitness-level').value;
-        const workoutFrequency = document.getElementById('workout-frequency').value;
-        const goal = document.getElementById('goal').value;
-
-        // Logic to determine a recommendation based on the answers
-        let recommendation = "We recommend a personalized fitness plan for you!";
-        
-        if (goal === "muscle-gain") {
-            recommendation = "We recommend a muscle gain plan to help you build strength!";
-        } else if (goal === "weight-loss") {
-            recommendation = "A weight loss plan would be ideal to help you reach your goals!";
-        } else if (fitnessLevel === "beginner") {
-            recommendation = "Start with a general fitness plan to get you on track!";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result Recommendation</title>
+    <style>
+        /* Style for the Modal */
+        .recommendation-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            padding-top: 60px;
         }
 
-        // Display the recommendation (this can be customized to show it on the page or in a pop-up)
-        alert(recommendation);
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
 
-        // Prevent form submission (or you can submit the form if needed)
-        return false;
-    }
-</script>
+        /* Close Button */
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Modal message text */
+        .modal-message {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Checkbox and button styling */
+        #dont-show-again {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the button */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Here -->
+
+    <!-- Recommendation Popup Modal -->
+    <div id="recommendation-modal" class="recommendation-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p class="modal-message">We recommend this package based on your quiz results. Take a look!</p>
+            <button onclick="goToPackages()">Take a Look</button>
+            <label for="dont-show-again">
+                <input type="checkbox" id="dont-show-again" onchange="toggleShowAgain()"> Don't show again
+            </label>
+        </div>
+    </div>
+
+    <!-- Your quiz results content here -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result Recommendation</title>
+    <style>
+        /* Style for the Modal */
+        .recommendation-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Close Button */
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Modal message text */
+        .modal-message {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Checkbox and button styling */
+        #dont-show-again {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the button */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Here -->
+
+    <!-- Recommendation Popup Modal -->
+    <div id="recommendation-modal" class="recommendation-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p class="modal-message">We recommend this package based on your quiz results. Take a look!</p>
+            <button onclick="goToPackages()">Take a Look</button>
+            <label for="dont-show-again">
+                <input type="checkbox" id="dont-show-again" onchange="toggleShowAgain()"> Don't show again
+            </label>
+        </div>
+    </div>
+
+    <!-- Your quiz results content here -->
+
+    <script>
+        // JavaScript for showing/hiding modal
+        window.onload = function() {
+            // Check if user opted to not show again
+            if (!localStorage.getItem('dontShowAgain')) {
+                setTimeout(showModal, 1000); // Delay to show modal
+            }
+        };
+
+        // Show the modal
+        function showModal() {
+            document.getElementById("recommendation-modal").style.display = "block";
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById("recommendation-modal").style.display = "none";
+        }
+
+        // Go to packages page when the user clicks the button
+        function goToPackages() {
+            window.location.href = "packages.html"; // Redirect to packages page
+        }
+
+        // Handle checkbox change and store preference in localStorage
+        function toggleShowAgain() {
+            const checkBox = document.getElementById('dont-show-again');
+            if (checkBox.checked) {
+                localStorage.setItem('dontShowAgain', true);
+            } else {
+                localStorage.removeItem('dontShowAgain');
+            }
+        }
+    </script>
+</body>
+</html>
+
+</body>
+</html>
 
 <body>
 
