@@ -209,16 +209,7 @@
         .disclaimer-section input {
             margin-right: 10px;
         }
-    </style>
-</head>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result Recommendation</title>
-    <style>
         /* Style for the Modal */
         .recommendation-modal {
             display: none; /* Hidden by default */
@@ -292,7 +283,59 @@
     </style>
 </head>
 <body>
-    <!-- Main Content Here -->
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <img src="C:/Users/Meow/Desktop/AMLiving/amliving html/AMlogo.png" alt="AM Living Fit Logo">
+        </div>
+        <div class="nav-links">
+            <a class="nav-item" href="#home">Home</a>
+            <a class="nav-item" href="#quiz">Take a Quiz</a>
+            <a class="nav-item" href="#packages">Packages</a>
+            <a class="nav-item" href="#about">About</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to AM Living Fit</h1>
+        <p>Discover your fitness plan with our personalized quiz!</p>
+    </div>
+
+    <!-- Registration Section -->
+    <div class="registration-section">
+        <h2>Registration</h2>
+        <form class="registration-form">
+            <label for="age">Age</label>
+            <select id="age" name="age">
+                <option value="under18">Under 18</option>
+                <option value="18-30">18-30</option>
+                <option value="31-40">31-40</option>
+                <option value="41-50">41-50</option>
+                <option value="51+">51+</option>
+            </select>
+            <label for="fitness">Fitness Level</label>
+            <select id="fitness" name="fitness">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <button type="submit" class="cta-btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-media-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="footer-content">
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Recommendation Popup Modal -->
     <div id="recommendation-modal" class="recommendation-modal">
@@ -305,398 +348,36 @@
             </label>
         </div>
     </div>
-
-    <!-- Your quiz results content here -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result Recommendation</title>
-    <style>
-        /* Style for the Modal */
-        .recommendation-modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0); /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-            padding-top: 60px;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* Close Button */
-        .close-btn {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            transition: 0.3s;
-        }
-
-        .close-btn:hover,
-        .close-btn:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Modal message text */
-        .modal-message {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        /* Checkbox and button styling */
-        #dont-show-again {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Style for the button */
-        button {
-            background-color: #4CAF50; /* Green */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <!-- Main Content Here -->
-
-    <!-- Recommendation Popup Modal -->
-    <div id="recommendation-modal" class="recommendation-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <p class="modal-message">We recommend this package based on your quiz results. Take a look!</p>
-            <button onclick="goToPackages()">Take a Look</button>
-            <label for="dont-show-again">
-                <input type="checkbox" id="dont-show-again" onchange="toggleShowAgain()"> Don't show again
-            </label>
-        </div>
-    </div>
-
-    <!-- Your quiz results content here -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Result Recommendation</title>
-    <style>
-        /* Style for the Modal */
-        .recommendation-modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0, 0, 0); /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-            padding-top: 60px;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        /* Close Button */
-        .close-btn {
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            transition: 0.3s;
-        }
-
-        .close-btn:hover,
-        .close-btn:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Modal message text */
-        .modal-message {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        /* Checkbox and button styling */
-        #dont-show-again {
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        /* Style for the button */
-        button {
-            background-color: #4CAF50; /* Green */
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <!-- Main Content Here -->
-
-    <!-- Recommendation Popup Modal -->
-    <div id="recommendation-modal" class="recommendation-modal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
-            <p class="modal-message">We recommend this package based on your quiz results. Take a look!</p>
-            <button onclick="goToPackages()">Take a Look</button>
-            <label for="dont-show-again">
-                <input type="checkbox" id="dont-show-again" onchange="toggleShowAgain()"> Don't show again
-            </label>
-        </div>
-    </div>
-
-    <!-- Your quiz results content here -->
 
     <script>
         // JavaScript for showing/hiding modal
         window.onload = function() {
-            // Check if user opted to not show again
             if (!localStorage.getItem('dontShowAgain')) {
-                setTimeout(showModal, 1000); // Delay to show modal
+                setTimeout(showModal, 1000);
             }
         };
 
-        // Show the modal
         function showModal() {
-            document.getElementById("recommendation-modal").style.display = "block";
+            document.getElementById('recommendation-modal').style.display = 'block';
         }
 
-        // Close the modal
         function closeModal() {
-            document.getElementById("recommendation-modal").style.display = "none";
+            document.getElementById('recommendation-modal').style.display = 'none';
         }
 
-        // Go to packages page when the user clicks the button
         function goToPackages() {
-            window.location.href = "packages.html"; // Redirect to packages page
+            window.location.href = 'packages.html';
         }
 
-        // Handle checkbox change and store preference in localStorage
         function toggleShowAgain() {
-            const checkBox = document.getElementById('dont-show-again');
-            if (checkBox.checked) {
+            const dontShowAgain = document.getElementById('dont-show-again').checked;
+            if (dontShowAgain) {
                 localStorage.setItem('dontShowAgain', true);
             } else {
                 localStorage.removeItem('dontShowAgain');
             }
         }
     </script>
-</body>
-</html>
-
-<header>
-    <div class="logo-container">
-         <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html" class="nav-item">Home</a></li>
-        <li><a href="bio.html" class="nav-item">Bio</a></li>
-        <li><a href="packages.html" class="nav-item">Our Packages</a></li>
-        <li><a href="mission.html" class="nav-item">Our Mission</a></li>
-        <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
-        <li><a href="register.html" class="nav-item">Register</a></li>
-    </ul>
-</header>
-
-<style>
-    /* Header Styles */
-    header {
-        background-color: #2c3e50;
-        color: #ffffff;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-
-    .logo-container img {
-        width: 150px; /* Resize the logo */
-        height: auto;
-    }
-
-    .nav-links {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        padding-top: 20px; /* Added space between logo and tabs */
-    }
-
-    .nav-item {
-        color: #ffffff;
-        font-size: 16px;
-        padding: 10px 20px;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-item:hover {
-        background-color: #34495e;
-        border-radius: 5px;
-    }
-
-    .nav-item.active {
-        background-color: #8e44ad; /* Active tab color */
-        color: #ffffff;
-    }
-</style>
-
-<!-- Hero Section -->
-<section class="hero">
-    <h1>We want to know you better!</h1>
-    <p>Answer a few questions!</p>
-</section>
-
-<!-- Registration Section with Quiz Form -->
-<section class="registration-section">
-    <div class="registration-form">
-        <!-- Question 1: The longest question -->
-        <div class="quiz-question">
-            <label for="medical-conditions">Do you have any medical conditions we should know about?</label>
-            <select id="medical-conditions" name="medical-conditions">
-                <option value="none">None</option>
-                <option value="diabetes">Diabetes</option>
-                <option value="hypertension">Hypertension</option>
-                <option value="heart-disease">Heart Disease</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <!-- Question 2 -->
-        <div class="quiz-question">
-            <label for="fitness-level">How would you rate your current fitness level?</label>
-            <select id="fitness-level" name="fitness-level">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
-        </div>
-
-        <!-- Question 3 -->
-        <div class="quiz-question">
-            <label for="workout-frequency">How often do you currently work out?</label>
-            <select id="workout-frequency" name="workout-frequency">
-                <option value="never">Never</option>
-                <option value="1-2-times-per-week">1-2 times per week</option>
-                <option value="3-4-times-per-week">3-4 times per week</option>
-                <option value="5-plus-times-per-week">5+ times per week</option>
-            </select>
-        </div>
-
-        <!-- Question 4: What is your fitness goal? -->
-        <div class="quiz-question">
-            <label for="goal">What is your fitness goal?</label>
-            <select id="goal" name="goal">
-                <option value="muscle-gain">Muscle Gain</option>
-                <option value="general-fitness">General Fitness</option>
-                <option value="endurance">Endurance</option>
-                <option value="weight-loss">Weight Loss</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <!-- Disclaimer -->
-        <div class="disclaimer-section">
-            <label>
-                <input type="checkbox" id="disclaimer" name="disclaimer"> I acknowledge that this quiz is for informational purposes only. 
-            </label>
-        </div>
-
-<!-- Submit Quiz Button (Above Start Your Journey) -->
-<a href="javascript:void(0);" class="cta-btn" onclick="handleSubmit(); window.location.href='packages.html';">
-    <span class="icon"><i class="fas fa-heart"></i></span> Submit Quiz
-</a>
-
-<script>
-    function handleSubmit() {
-        // Perform any validation or actions needed when submitting the quiz
-        console.log("Quiz submitted!");
-        
-        // Optionally show a confirmation message or handle other logic
-        alert("Quiz Submitted! You will be redirected to the Packages Page.");
-    }
-</script>
-
-<!-- Start Your Journey Section (with Icon and Same Behavior) -->
-<a href="start-journey.html" class="cta-btn">
-    <span class="icon"><i class="fas fa-heart"></i></span> Start Your Journey
-</a>
-</div>
-    
- </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
-        </div>
-    </footer>
 
 </body>
 </html>
