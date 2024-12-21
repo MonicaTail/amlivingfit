@@ -403,6 +403,101 @@
     </div>
 
     <!-- Your quiz results content here -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result Recommendation</title>
+    <style>
+        /* Style for the Modal */
+        .recommendation-modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0); /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Close Button */
+        .close-btn {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            transition: 0.3s;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Modal message text */
+        .modal-message {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* Checkbox and button styling */
+        #dont-show-again {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Style for the button */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content Here -->
+
+    <!-- Recommendation Popup Modal -->
+    <div id="recommendation-modal" class="recommendation-modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p class="modal-message">We recommend this package based on your quiz results. Take a look!</p>
+            <button onclick="goToPackages()">Take a Look</button>
+            <label for="dont-show-again">
+                <input type="checkbox" id="dont-show-again" onchange="toggleShowAgain()"> Don't show again
+            </label>
+        </div>
+    </div>
+
+    <!-- Your quiz results content here -->
 
     <script>
         // JavaScript for showing/hiding modal
@@ -440,11 +535,6 @@
     </script>
 </body>
 </html>
-
-</body>
-</html>
-
-<body>
 
 <header>
     <div class="logo-container">
