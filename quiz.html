@@ -211,6 +211,34 @@
         }
     </style>
 </head>
+
+<script>
+    function handleSubmit() {
+        // Get the values of the selected answers
+        const medicalConditions = document.getElementById('medical-conditions').value;
+        const fitnessLevel = document.getElementById('fitness-level').value;
+        const workoutFrequency = document.getElementById('workout-frequency').value;
+        const goal = document.getElementById('goal').value;
+
+        // Logic to determine a recommendation based on the answers
+        let recommendation = "We recommend a personalized fitness plan for you!";
+        
+        if (goal === "muscle-gain") {
+            recommendation = "We recommend a muscle gain plan to help you build strength!";
+        } else if (goal === "weight-loss") {
+            recommendation = "A weight loss plan would be ideal to help you reach your goals!";
+        } else if (fitnessLevel === "beginner") {
+            recommendation = "Start with a general fitness plan to get you on track!";
+        }
+
+        // Display the recommendation (this can be customized to show it on the page or in a pop-up)
+        alert(recommendation);
+
+        // Prevent form submission (or you can submit the form if needed)
+        return false;
+    }
+</script>
+
 <body>
 
 <header>
@@ -334,12 +362,15 @@
             </label>
         </div>
 
-        <!-- Start Your Journey Button -->
-        <a href="register.html" class="cta-btn">
-            <span class="icon"><i class="fas fa-heart"></i></span> Start Your Journey
-        </a>
-    </div>
-</section>
+       <!-- Submit Quiz Button (Above Start Your Journey) -->
+<a href="javascript:void(0);" class="cta-btn" onclick="return handleSubmit();">
+    <span class="icon"><i class="fas fa-paper-plane"></i></span> Submit Quiz
+</a>
+
+<!-- Start Your Journey Section (with Icon and Same Behavior) -->
+<a href="start-journey.html" class="cta-btn">
+    <span class="icon"><i class="fas fa-paper-plane"></i></span> Start Your Journey
+</a>
 
 <!-- Footer Section -->
 <footer>
