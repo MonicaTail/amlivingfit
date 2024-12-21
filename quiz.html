@@ -18,7 +18,7 @@
             box-sizing: border-box;
             background-color: #f4f7f6;
             color: #333;
-            text-align: center; /* Centering text globally */
+            text-align: center;
         }
 
         a {
@@ -80,87 +80,80 @@
             margin: 10px 0 0;
         }
 
-        /* Registration Section */
-        .registration-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        /* Quiz Section */
+        .quiz-section {
             padding: 50px 20px;
             background-color: #f4f7f6;
         }
 
-        .registration-section h2 {
+        .quiz-section h2 {
             font-size: 2.5em;
             color: #8e44ad;
             margin-bottom: 20px;
         }
 
-        .registration-form {
+        .quiz-form {
             background-color: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 500px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 2px solid #8e44ad; /* Added border around the form */
+            margin: 0 auto;
         }
 
-        /* Dropdown Styling */
-        .registration-form select {
-            width: 50%;
+        .quiz-form label {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        .quiz-form select {
+            width: 100%;
             padding: 12px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             border: 2px solid #ccc;
             border-radius: 5px;
             font-size: 1em;
             box-sizing: border-box;
         }
 
-        .registration-form label {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 10px;
+        .quiz-form input[type="checkbox"] {
+            margin-top: 10px;
         }
 
         /* Button Styles */
         .cta-btn {
-            background-color: #ffffff; /* White background by default */
-            border: 2px solid #8e44ad; /* Purple border */
+            background-color: #ffffff;
+            border: 2px solid #8e44ad;
             padding: 15px 30px;
             font-size: 18px;
             border-radius: 50px;
-            color: #8e44ad; /* Purple text */
+            color: #8e44ad;
             text-transform: uppercase;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-            text-align: center;
             margin-top: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
         }
 
         .cta-btn:hover {
             background: linear-gradient(135deg, #8e44ad, #27ae60);
             color: white;
-            border-color: #8e44ad;
         }
 
-        .cta-btn .icon {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #d1a4e3;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        /* Recommendation Section */
+        .recommendation-section {
+            display: none; /* Hidden by default */
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #e8f8f5;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .cta-btn:hover .icon {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-10px) scale(1.2);
+        .recommendation-section h2 {
+            color: #27ae60;
         }
 
         /* Footer */
@@ -170,81 +163,84 @@
             padding: 20px 0;
             text-align: center;
         }
-
-        .social-media-links {
-            margin-bottom: 10px;
-        }
-
-        .social-icon {
-            margin: 0 15px;
-            font-size: 2em;
-            color: white;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-icon:hover {
-            color: #3498db;
-        }
-
-        .footer-content p {
-            margin: 10px 0;
-        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-container">
-         <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
+        <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
     </div>
     <ul class="nav-links">
         <li><a href="index.html" class="nav-item">Home</a></li>
-        <li><a href="bio.html" class="nav-item">Bio</a></li>
-        <li><a href="packages.html" class="nav-item">Our Packages</a></li>
-        <li><a href="mission.html" class="nav-item">Our Mission</a></li>
-        <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
-        <li><a href="register.html" class="nav-item">Register</a></li>
     </ul>
 </header>
 
 <section class="hero">
-    <h1>We want to know you better!</h1>
-    <p>Answer a few questions!</p>
+    <h1>Take Our Quiz!</h1>
+    <p>Find the perfect fitness plan for you.</p>
 </section>
 
-<section class="registration-section">
-    <div class="registration-form">
+<section class="quiz-section">
+    <div class="quiz-form">
+        <h2>Quiz</h2>
+
         <label for="goal">What is your fitness goal?</label>
         <select id="goal">
-            <option>Muscle Gain</option>
-            <option>Weight Loss</option>
+            <option value="muscle">Muscle Gain</option>
+            <option value="weight">Weight Loss</option>
+        </select>
+
+        <label for="age">What is your age group?</label>
+        <select id="age">
+            <option value="under30">Under 30</option>
+            <option value="30to50">30-50</option>
+            <option value="50plus">50+</option>
         </select>
 
         <label>
-            <input type="checkbox"> I acknowledge that this quiz is for informational purposes only.
+            <input type="checkbox" id="agreement"> I acknowledge this quiz is informational only.
         </label>
 
-        <!-- Start Your Journey Button -->
-        <a href="register.html" class="cta-btn">
-            <span class="icon"><i class="fas fa-heart"></i></span> Start Your Journey
-        </a>
-
-        <!-- Recommendation Button -->
-        <a href="recommendation.html" class="cta-btn">
-            <span class="icon"><i class="fas fa-heart"></i></span> Recommendation
-        </a>
+        <button class="cta-btn" onclick="submitQuiz()">Submit Quiz</button>
     </div>
 </section>
 
+<section class="recommendation-section" id="recommendation">
+    <h2>Your Personalized Recommendation</h2>
+    <p id="recommendationText"></p>
+    <a href="recommendation.html" class="cta-btn">View Details</a>
+</section>
+
 <footer>
-    <div class="footer-content">
-        <div class="social-media-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        </div>
-        <p>© 2024 AM Living Fit. All rights reserved.</p>
-    </div>
+    <p>© 2024 AM Living Fit. All rights reserved.</p>
 </footer>
+
+<script>
+    function submitQuiz() {
+        const goal = document.getElementById('goal').value;
+        const age = document.getElementById('age').value;
+        const agreement = document.getElementById('agreement').checked;
+
+        if (!agreement) {
+            alert('Please agree to the terms before submitting.');
+            return;
+        }
+
+        let recommendation = 'Based on your answers, we recommend: ';
+
+        if (goal === 'muscle' && age === 'under30') {
+            recommendation += 'The Youth Muscle Builder Plan.';
+        } else if (goal === 'weight') {
+            recommendation += 'The Weight Loss Accelerator Plan.';
+        } else {
+            recommendation += 'The Balanced Fitness Plan.';
+        }
+
+        document.getElementById('recommendationText').innerText = recommendation;
+        document.getElementById('recommendation').style.display = 'block';
+    }
+</script>
 
 </body>
 </html>
