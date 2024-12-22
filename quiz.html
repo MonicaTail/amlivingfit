@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Amanda  - Instructor Bio</title>
+    <title>AM Living Fit - Quiz</title>
 
     <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -16,7 +16,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f7f6;
             color: #333;
+            text-align: center; /* Centering text globally */
         }
 
         a {
@@ -47,70 +49,123 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            padding-top: 20px;
         }
 
-.nav-item {
-    color: #ffffff;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.nav-item:hover {
-    background-color: #34495e; /* Slightly darker on hover */
-    border-radius: 5px;
-    border: 2px solid white; /* White border on hover */
-}
-
-
-        .nav-item.active {
-            background-color: #8e44ad;
+        .nav-item {
             color: #ffffff;
+            font-size: 16px;
+            padding: 10px;
         }
 
-        /* Bio Section */
-        .bio-background {
-            background: linear-gradient(135deg, #8e44ad, #27ae60);
-            padding: 60px 20px;
+        .nav-item:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Fixed gradient background */
+            color: white;
+            padding: 100px 0;
             text-align: center;
-            position: relative;
         }
 
-        .bio-background img {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-            border: 5px solid white; /* White border around the picture */
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
         }
 
-        .bio-container {
-            margin: 30px auto;
-            padding: 30px 20px;
-            background-color: #ffffff;
-            color: #333;
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0 0;
+        }
+
+        /* Registration Section */
+        .registration-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 20px;
+            background-color: #f4f7f6;
+        }
+
+        .registration-section h2 {
+            font-size: 2.5em;
+            color: #8e44ad;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            background-color: white;
+            padding: 30px;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            border: 3px solid purple; /* Purple border around the text box */
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #8e44ad; /* Added border around the form */
         }
 
-        .bio-card {
+        /* Set width of all select dropdowns to match "Under 18" size */
+        .registration-form select {
+            width: 50%; /* Adjust the width to match your desired size */
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        .registration-form label {
+            width: 100%;
             text-align: center;
+            margin-bottom: 10px;
         }
 
-        .bio-text {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin: 10px 0;
-            text-align: justify; /* Justified text */
+        /* Button Styles */
+        .cta-btn {
+            background-color: #ffffff; /* White background by default */
+            border: 2px solid #8e44ad; /* Purple border */
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            color: #8e44ad; /* Purple text */
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        /* Footer Styles */
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Gradient background on hover */
+            color: white; /* White text when hovered */
+            border-color: #8e44ad; /* Keep purple border on hover */
+        }
+
+        .cta-btn .icon {
+            position: absolute;
+            top: -20px; /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d1a4e3; /* Lighter purple than the button */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cta-btn:hover .icon {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px) scale(1.2); /* Slightly enlarge the icon */
+        }
+
+        /* Footer */
         footer {
-            background: linear-gradient(135deg, #27ae60, #8e44ad);
+            background: linear-gradient(135deg, #27ae60, #8e44ad); /* Fixed gradient background */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -136,42 +191,41 @@
             margin: 10px 0;
         }
 
-        /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
+        /* Medical Disclaimer and Notice */
+        .disclaimer-section {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 15px;
+        }
 
-            .bio-container {
-                padding: 30px 10px;
-            }
+        .disclaimer-section label {
+            font-size: 1.2em;
+            text-align: center;
+            margin-top: 10px;
+        }
 
-            .bio-text {
-                font-size: 1em;
-            }
-
-            .bio-background img {
-                width: 150px;
-            }
+        .disclaimer-section input {
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <!-- Header with Navigation -->
-    <header>
-        <div class="logo-container">
-             <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="bio.html" class="nav-item">Bio</a></li>
-            <li><a href="packages.html" class="nav-item">Our Packages</a></li>
-            <li><a href="mission.html" class="nav-item">Our Mission</a></li>
-            <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
-            <li><a href="register.html" class="nav-item">Register</a></li>
-        </ul>
-    </header>
+
+<header>
+    <div class="logo-container">
+         <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="nav-item">Home</a></li>
+        <li><a href="bio.html" class="nav-item">Bio</a></li>
+        <li><a href="packages.html" class="nav-item">Our Packages</a></li>
+        <li><a href="mission.html" class="nav-item">Our Mission</a></li>
+        <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
+        <li><a href="register.html" class="nav-item">Register</a></li>
+    </ul>
+</header>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -230,24 +284,18 @@
 </section>
 
 <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+<footer>
+    <div class="social-media-links">
+        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <div class="footer-content">
+        <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
+    </div>
+</footer>
+
 <!-- Script to Handle Package Recommendation -->
 <script>
     function recommendPackage() {
