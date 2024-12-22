@@ -262,43 +262,61 @@
         <div class="quiz-question">
             <label for="workout-frequency">How often do you currently work out?</label>
             <select id="workout-frequency" name="workout-frequency">
-                <option value="never">Never</option>
-                <option value="1-2-times-per-week">1-2 times per week</option>
-                <option value="3-4-times-per-week">3-4 times per week</option>
-                <option value="5-plus-times-per-week">5+ times per week</option>
+                <option value="1-2">1-2 times per week</option>
+                <option value="3-4">3-4 times per week</option>
+                <option value="5+">5+ times per week</option>
             </select>
         </div>
 
-        <!-- Question 4: What is your fitness goal? -->
-        <div class="quiz-question">
-            <label for="goal">What is your fitness goal?</label>
-            <select id="goal" name="goal">
-                <option value="lose-weight">Lose Weight</option>
-                <option value="build-muscle">Build Muscle</option>
-                <option value="improve-endurance">Improve Endurance</option>
-                <option value="maintain-fitness">Maintain Fitness</option>
-            </select>
-        </div>
+        <button class="cta-btn" onclick="recommendPackage()">
+            Get My Recommendation
+            <div class="icon">
+                <i class="fas fa-heart"></i> <!-- Purple Heart Icon -->
+            </div>
+        </button>
+    </div>
 
-        <!-- Submit Button -->
-        <a href="#" class="cta-btn">
-            Take the Quiz
-            <i class="fas fa-chevron-right icon"></i>
-        </a>
+    <!-- Package Recommendation Section -->
+    <div id="recommendation-section" style="display:none;">
+        <h2>Your Recommended Package</h2>
+        <p id="package-recommendation"></p>
     </div>
 </section>
 
 <!-- Footer Section -->
 <footer>
+    <div class="social-media-links">
+        <a href="https://facebook.com" class="social-icon" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
     <div class="footer-content">
-        <div class="social-media-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        </div>
-        <p>© 2024 AM Living Fit. All rights reserved.</p>
+        <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
     </div>
 </footer>
+
+<!-- Script to Handle Package Recommendation -->
+<script>
+    function recommendPackage() {
+        var medicalCondition = document.getElementById('medical-conditions').value;
+        var fitnessLevel = document.getElementById('fitness-level').value;
+        var workoutFrequency = document.getElementById('workout-frequency').value;
+        var recommendation = "";
+
+        if (medicalCondition !== "none") {
+            recommendation = "We recommend a beginner package considering your medical conditions.";
+        } else if (fitnessLevel === "intermediate" && (workoutFrequency === "3-4" || workoutFrequency === "1-2")) {
+            recommendation = "We recommend an Intermediate Package for you!";
+        } else if (fitnessLevel === "advanced" && workoutFrequency === "5+") {
+            recommendation = "We recommend an Advanced Package for you!";
+        }
+
+        // Show the recommendation section
+        document.getElementById("package-recommendation").innerText = recommendation;
+        document.getElementById("recommendation-section").style.display = "block";
+    }
+</script>
 
 </body>
 </html>
