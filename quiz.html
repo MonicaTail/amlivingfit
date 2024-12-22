@@ -359,6 +359,42 @@
         <p>© 2024 AM Living Fit. All rights reserved.</p>
     </div>
 </footer>
+<!-- Submit Button -->
+        <button type="button" class="cta-btn" onclick="submitQuiz()">Start Your Journey</button>
+    </form>
+</section>
 
+<!-- Popup Modal for after Quiz Submission -->
+<div id="popup">
+    <h2>Congratulations on completing the quiz!</h2>
+    <p>Based on your answers, we recommend our personalized package.</p>
+    <button onclick="goToRegister()">Join Now</button>
+    <button onclick="goToHome()">Go to Home</button>
+</div>
+
+<script>
+    // Function to handle quiz submission
+    function submitQuiz() {
+        // Get form values
+        var fitnessLevel = document.getElementById('fitness-level').value;
+        var goal = document.getElementById('goal').value;
+        
+        // Here you can add logic to calculate and recommend a package based on the answers
+        // For now, just show the popup
+
+        document.getElementById('popup').style.display = 'block'; // Show the popup
+    }
+
+    // Function to navigate to the Register page
+    function goToRegister() {
+        // Optionally, you can pass data to the registration page if needed
+        window.location.href = 'register.html'; // Redirect to register page
+    }
+
+    // Function to navigate to the Home page
+    function goToHome() {
+        window.location.href = 'index.html'; // Redirect to home page
+    }
+</script>
 </body>
 </html>
