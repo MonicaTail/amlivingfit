@@ -4,173 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Page</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Logo */
-        .logo-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .logo-container img {
-            width: 150px;
-        }
-
-        /* Quiz Section */
-        .quiz-container {
-            margin: 20px auto;
-            padding: 20px;
-            max-width: 600px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            background-color: #f9f9f9;
-        }
-
-        .quiz-container h2 {
-            text-align: center;
-        }
-
-        .quiz-question {
-            margin-bottom: 15px;
-        }
-
-        .quiz-question label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .quiz-question select,
-        .quiz-question input[type='checkbox'] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .cta-btn {
-            display: block;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .cta-btn:hover {
-            background-color: #388E3C;
-        }
-
-        /* Footer */
-        footer {
-            margin-top: 40px;
-            text-align: center;
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
-        }
-
-        .footer-content .social-icon {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .footer-content p {
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="logo-container">
-        <a href="index.html"><img src="AMlogo.png" alt="AM Living Fit Logo"></a>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="quiz.html">Take a Quiz</a></li>
+                <li><a href="bio.html">Bio</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <section class="quiz-container">
-        <h2>Take Our Quiz</h2>
+    <main>
+        <section class="quiz-section">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <img src="purple-heart.png" alt="Purple Heart Icon" class="icon-heart">
+                    <h1>Take Our Quiz</h1>
+                </div>
+                <form action="results.html" method="POST">
+                    <label for="goal">Your Goal:</label>
+                    <select id="goal" name="goal">
+                        <option value="fitness">Fitness</option>
+                        <option value="weight-loss">Weight Loss</option>
+                    </select>
 
-        <div class="quiz-question">
-            <label for="goal">What is your primary fitness goal?</label>
-            <select id="goal" name="goal">
-                <option value="muscle-gain">Muscle Gain</option>
-                <option value="weight-loss">Weight Loss</option>
-                <option value="endurance">Endurance</option>
-                <option value="general-fitness">General Fitness</option>
-            </select>
-        </div>
+                    <label for="age">Your Age:</label>
+                    <select id="age" name="age">
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                    </select>
 
-        <div class="quiz-question">
-            <label for="age">What is your age group?</label>
-            <select id="age" name="age">
-                <option value="18-24">18-24</option>
-                <option value="25-34">25-34</option>
-                <option value="35-44">35-44</option>
-                <option value="45+">45+</option>
-            </select>
-        </div>
+                    <label for="fitness-level">Fitness Level:</label>
+                    <select id="fitness-level" name="fitness-level">
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                    </select>
 
-        <div class="quiz-question">
-            <label for="fitness-level">What is your fitness level?</label>
-            <select id="fitness-level" name="fitness-level">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-            </select>
-        </div>
-
-        <div class="quiz-question">
-            <label for="medical-conditions">Do you have any medical conditions?</label>
-            <select id="medical-conditions" name="medical-conditions">
-                <option value="none">None</option>
-                <option value="diabetes">Diabetes</option>
-                <option value="hypertension">Hypertension</option>
-                <option value="heart-disease">Heart Disease</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-
-        <div class="quiz-question">
-            <label for="frequency">How often do you work out per week?</label>
-            <select id="frequency" name="frequency">
-                <option value="1-2">1-2 times</option>
-                <option value="3-4">3-4 times</option>
-                <option value="5+">5+ times</option>
-            </select>
-        </div>
-
-        <div class="quiz-question">
-            <label>
-                <input type="checkbox" id="disclaimer" name="disclaimer">
-                I acknowledge that this quiz is for informational purposes only.
-            </label>
-        </div>
-
-        <a href="packages.html" class="cta-btn" onclick="handleSubmit()">Submit Quiz</a>
-    </section>
+                    <button type="submit" class="btn-primary">Enter Quiz</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer-content">
-            <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="mailto:info@livingfit.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="tel:+123456789" class="social-icon"><i class="fas fa-phone-alt"></i></a>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
+            <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
+            <div class="footer-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="tel:+123456789">📞 +1 (234) 567-89</a>
+                <a href="mailto:info@example.com">📧 info@example.com</a>
+            </div>
         </div>
     </footer>
-
-    <script>
-        function handleSubmit() {
-            alert('Quiz Submitted! Redirecting to Packages Page.');
-        }
-    </script>
 </body>
 </html>
