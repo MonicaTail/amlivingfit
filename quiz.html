@@ -336,6 +336,9 @@
         </div>
         <!-- Submit Button -->
         <button type="button" class="cta-btn" onclick="submitQuiz()">Sumbit Quiz</button>
+    <span class="icon"><i class="fas fa-heart"></i></span> Submit Quiz
+</button>
+
     </form>
 </section>
 
@@ -376,6 +379,45 @@
 </script>
 
 </section>
+
+<!-- Popup Modal for after Quiz Submission -->
+<div id="popup" style="display:none;">
+    <h2>Congratulations on completing the quiz!</h2>
+    <p>Based on your answers, we recommend our personalized package.</p>
+</div>
+<script>
+    // Function to handle quiz submission
+    function submitQuiz() {
+        // Get form values (fitness level, goal, etc.)
+        var fitnessLevel = document.getElementById('fitness-level').value;
+        var goal = document.getElementById('goal').value;
+        
+        // Add any other form fields you want to include for recommendations
+        
+        // Logic to determine package recommendation based on answers
+        var recommendationMessage = '';
+        
+        if (fitnessLevel === 'Beginner' && goal === 'Weight Loss') {
+            recommendationMessage = 'We recommend our Beginner Weight Loss Plan.';
+        } else if (fitnessLevel === 'Intermediate' && goal === 'Muscle Gain') {
+            recommendationMessage = 'Try our Intermediate Muscle Gain Plan.';
+        } else {
+            recommendationMessage = 'Based on your answers, we suggest our general fitness package.';
+        }
+        
+        // Show the recommendation in the popup
+        document.getElementById('popup-message').innerText = recommendationMessage;
+        
+        // Show the popup
+        document.getElementById('popup').style.display = 'block'; // Show the popup
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+    }
+</script>
+
 
 <!-- Footer Section -->
 <footer>
