@@ -298,12 +298,37 @@
                 <label for="notice">I acknowledge the 24-hour notice policy.</label>
                 <input type="checkbox" id="notice" required>
             </div>
-            
+
             <!-- Become a Member Button -->
-            <a href="register.html" class="cta-btn">
-                Become a Member
-                <i class="fas fa-heart icon"></i> <!-- Heart Icon -->
-            </a>
+<a href="register.html" id="becomeMemberBtn" class="cta-btn">
+    Become a Member
+    <i class="fas fa-heart icon"></i> <!-- Heart Icon -->
+</a>
+
+<!-- Message to display after click -->
+<div id="funMessage" style="display:none; font-size: 20px; color: green; margin-top: 20px;">
+    You did it!
+</div>
+
+<script>
+    // Get the button and message elements
+    const button = document.getElementById("becomeMemberBtn");
+    const funMessage = document.getElementById("funMessage");
+
+    // Add click event listener
+    button.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent navigation to 'register.html' temporarily
+        
+        // Show the fun message
+        funMessage.style.display = "block";
+        
+        // Optionally, redirect to the registration page after a brief delay (e.g., 2 seconds)
+        setTimeout(function() {
+            window.location.href = "register.html";
+        }, 2000); // 2-second delay
+    });
+</script>
+
 
         </div>
     </section>
