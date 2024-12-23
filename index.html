@@ -80,42 +80,42 @@
         }
 
         /* Button Styles */
-        .cta-btn {
-            background-color: #ffffff;
-            border: 2px solid #8e44ad;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 30px;
-            color: #8e44ad;
-            text-transform: uppercase;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            display: inline-block;
-            transition: all 0.3s ease-in-out;
-            position: relative;
-            text-align: center;
-            margin-top: 20px;
-        }
+.cta-btn {
+    background-color: #ffffff; /* White background by default */
+    border: 2px solid #000000; /* Black border */
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #000000; /* Black text */
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
 
-        .cta-btn:hover {
-            background: linear-gradient(135deg, #8e44ad, #27ae60);
-            color: white;
-            border-color: white;
-        }
+.cta-btn:hover {
+    background: linear-gradient(135deg, #8e44ad, #27ae60); /* Gradient background on hover */
+    color: white; /* White text when hovered */
+    border-color: white; /* White border on hover */
+}
 
-        .cta-btn .icon {
-            position: absolute;
-            top: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #d1a4e3;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
+.cta-btn .icon {
+    position: absolute;
+    top: -20px; /* Position above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #d1a4e3; /* Lighter purple than the button */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
 
-        .cta-btn:hover .icon {
-            opacity: 1;
-            transform: translateX(-50%) translateY(-10px) scale(1.2);
-        }
+.cta-btn:hover .icon {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px) scale(1.2); /* Slightly enlarge the icon */
+}
 
         /* Hero Section */
         .hero {
