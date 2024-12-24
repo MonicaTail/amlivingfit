@@ -136,10 +136,10 @@
         .submit-btn {
             background-color: #000000;
             color: white;
-            padding: 12px 25px;
+            padding: 8px 20px;
             border: none;
             border-radius: 50px;
-            font-size: 16px;
+            font-size: 14px;
             text-transform: uppercase;
             cursor: pointer;
             width: 100%;
@@ -226,15 +226,15 @@
     <!-- Quiz Section -->
     <section class="quiz-container">
         <h2>Health Quiz</h2>
-        <form action="#" method="POST">
+        <form id="quizForm" action="#" method="POST">
             <!-- Question 1 -->
             <div class="question">
                 <label for="q1">How often do you exercise?</label>
                 <div class="options">
-                    <label><input type="radio" name="q1" value="Never"> Never</label>
-                    <label><input type="radio" name="q1" value="Once a week"> Once a week</label>
-                    <label><input type="radio" name="q1" value="3-4 times a week"> 3-4 times a week</label>
-                    <label><input type="radio" name="q1" value="Daily"> Daily</label>
+                    <label><input type="radio" name="q1" value="1"> Never</label>
+                    <label><input type="radio" name="q1" value="2"> Once a week</label>
+                    <label><input type="radio" name="q1" value="3"> 3-4 times a week</label>
+                    <label><input type="radio" name="q1" value="4"> Daily</label>
                 </div>
             </div>
 
@@ -242,10 +242,10 @@
             <div class="question">
                 <label for="q2">What is your primary fitness goal?</label>
                 <div class="options">
-                    <label><input type="radio" name="q2" value="Lose weight"> Lose weight</label>
-                    <label><input type="radio" name="q2" value="Build muscle"> Build muscle</label>
-                    <label><input type="radio" name="q2" value="Improve endurance"> Improve endurance</label>
-                    <label><input type="radio" name="q2" value="Increase flexibility"> Increase flexibility</label>
+                    <label><input type="radio" name="q2" value="1"> Lose weight</label>
+                    <label><input type="radio" name="q2" value="2"> Build muscle</label>
+                    <label><input type="radio" name="q2" value="3"> Improve endurance</label>
+                    <label><input type="radio" name="q2" value="4"> Increase flexibility</label>
                 </div>
             </div>
 
@@ -253,57 +253,22 @@
             <div class="question">
                 <label for="q3">What type of exercise do you prefer?</label>
                 <div class="options">
-                    <label><input type="radio" name="q3" value="Cardio"> Cardio</label>
-                    <label><input type="radio" name="q3" value="Strength training"> Strength training</label>
-                    <label><input type="radio" name="q3" value="Yoga"> Yoga</label>
-                    <label><input type="radio" name="q3" value="HIIT"> HIIT</label>
-                </div>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="question">
-                <label for="q4">How long have you been working out?</label>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="Less than a month"> Less than a month</label>
-                    <label><input type="radio" name="q4" value="1-6 months"> 1-6 months</label>
-                    <label><input type="radio" name="q4" value="6 months - 1 year"> 6 months - 1 year</label>
-                    <label><input type="radio" name="q4" value="More than a year"> More than a year</label>
-                </div>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="question">
-                <label for="q5">What is your diet like?</label>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="Healthy"> Healthy</label>
-                    <label><input type="radio" name="q5" value="Moderately healthy"> Moderately healthy</label>
-                    <label><input type="radio" name="q5" value="Unhealthy"> Unhealthy</label>
-                    <label><input type="radio" name="q5" value="I don't know"> I don't know</label>
-                </div>
-            </div>
-
-            <!-- Question 6 -->
-            <div class="question">
-                <label for="q6">How many hours per week do you dedicate to exercise?</label>
-                <div class="options">
-                    <label><input type="radio" name="q6" value="1-3 hours"> 1-3 hours</label>
-                    <label><input type="radio" name="q6" value="3-5 hours"> 3-5 hours</label>
-                    <label><input type="radio" name="q6" value="5+ hours"> 5+ hours</label>
-                </div>
-            </div>
-
-            <!-- Question 7 -->
-            <div class="question">
-                <label for="q7">Do you prefer working out alone or in a group?</label>
-                <div class="options">
-                    <label><input type="radio" name="q7" value="Alone"> Alone</label>
-                    <label><input type="radio" name="q7" value="Group"> Group</label>
+                    <label><input type="radio" name="q3" value="1"> Cardio</label>
+                    <label><input type="radio" name="q3" value="2"> Strength training</label>
+                    <label><input type="radio" name="q3" value="3"> Yoga</label>
+                    <label><input type="radio" name="q3" value="4"> HIIT</label>
                 </div>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Submit Quiz</button>
+            <button type="button" class="submit-btn" onclick="calculateRecommendation()">Submit Quiz</button>
         </form>
+
+        <div id="recommendation" style="display: none;">
+            <h3>Recommended Package</h3>
+            <p id="packageName"></p>
+            <a href="packages.html" class="cta-btn">Explore Our Packages</a>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -323,6 +288,37 @@
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function calculateRecommendation() {
+            var score = 0;
+            var form = document.forms['quizForm'];
+
+            // Sum the score based on the user's choices
+            for (var i = 1; i <= 3; i++) {
+                var options = form['q' + i];
+                for (var j = 0; j < options.length; j++) {
+                    if (options[j].checked) {
+                        score += parseInt(options[j].value);
+                    }
+                }
+            }
+
+            // Determine the recommendation based on the score
+            var package = "";
+            if (score <= 5) {
+                package = "Beginner Package";
+            } else if (score <= 7) {
+                package = "Intermediate Package";
+            } else {
+                package = "Advanced Package";
+            }
+
+            // Display the recommendation
+            document.getElementById('recommendation').style.display = 'block';
+            document.getElementById('packageName').innerText = package;
+        }
+    </script>
 
 </body>
 </html>
