@@ -6,17 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AM Living Fit - Packages</title>
 
+    <!-- Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f9fafb;
+            background-color: #f7f9f8;
             color: #333;
         }
 
@@ -39,8 +42,15 @@
             text-align: center;
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
         .logo-container img {
-            width: 150px;
+            width: 150px; /* Resize the logo */
             height: auto;
         }
 
@@ -48,7 +58,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 15px;
+            padding-top: 20px;
         }
 
         .nav-item {
@@ -61,15 +71,17 @@
         .nav-item:hover {
             background-color: #34495e;
             border-radius: 5px;
+            border: 2px solid white;
         }
 
         .nav-item.active {
-            background-color: transparent;
+            background-color: #8e44ad;
+            color: #ffffff;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #2c3e50, #1e8449);
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -124,7 +136,7 @@
         .package-card .price {
             font-size: 2.5em;
             font-weight: bold;
-            color: #1e8449;
+            color: #27ae60;
             margin-bottom: 15px;
         }
 
@@ -149,13 +161,12 @@
             background-color: #444;
         }
 
-       /* Footer Styles */
+        /* Footer Styles */
         footer {
             background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
             color: white;
             padding: 20px 0;
             text-align: center;
-    
         }
 
         .social-media-links {
@@ -170,7 +181,7 @@
         }
 
         .social-icon:hover {
-            color: #1e8449;
+            color: #3498db;
         }
 
         .footer-content p {
@@ -243,9 +254,9 @@
     <!-- Footer Section -->
     <footer>
         <div class="social-media-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:info@livingfit.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+123456789" class="social-icon"><i class="fas fa-phone-alt"></i></a>
         </div>
         <p>© 2024 AM Living Fit. All rights reserved.</p>
     </footer>
