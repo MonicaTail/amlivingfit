@@ -281,44 +281,37 @@
                     <i class="fab fa-facebook-f"></i>
                 </a>
                 <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
+                    <i class="fab fa-instagram"></i>
                 </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
+                <a href="https://twitter.com" class="social-icon">
+                    <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
+            <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // JavaScript logic for package recommendation
         function calculateRecommendation() {
-            var score = 0;
-            var form = document.forms['quizForm'];
+            var q1 = document.querySelector('input[name="q1"]:checked');
+            
+            if (q1) {
+                var recommendationText = "";
 
-            // Sum the score based on the user's choices
-            for (var i = 1; i <= 3; i++) {
-                var options = form['q' + i];
-                for (var j = 0; j < options.length; j++) {
-                    if (options[j].checked) {
-                        score += parseInt(options[j].value);
-                    }
+                if (q1.value == "1" || q1.value == "2") {
+                    recommendationText = "Based on your responses, we recommend our 'Beginner Package'!";
+                } else if (q1.value == "3" || q1.value == "4") {
+                    recommendationText = "Based on your responses, we recommend our 'Intermediate Package'!";
+                } else if (q1.value == "5") {
+                    recommendationText = "Based on your responses, we recommend our 'Advanced Package'!";
                 }
-            }
 
-            // Determine the recommendation based on the score
-            var package = "";
-            if (score <= 5) {
-                package = "Beginner Package";
-            } else if (score <= 7) {
-                package = "Intermediate Package";
+                document.getElementById("packageName").textContent = recommendationText;
+                document.getElementById("recommendation").style.display = "block";
             } else {
-                package = "Advanced Package";
+                alert("Please answer all questions.");
             }
-
-            // Display the recommendation
-            document.getElementById('recommendation').style.display = 'block';
-            document.getElementById('packageName').innerText = package;
         }
     </script>
 
