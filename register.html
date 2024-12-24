@@ -106,35 +106,81 @@
             margin-bottom: 30px;
         }
 
-        /* Footer Section */
-        footer {
-            background-color: #2c3e50;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-            width: 100%;
-            margin-top: 40px;
-        }
-
-        .social-media-links {
+        /* Registration Section */
+        .registration-section {
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            gap: 20px;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .registration-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .registration-form input {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            max-width: 350px;
             margin-bottom: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
         }
 
-        .social-icon {
-            color: #fff;
-            font-size: 24px;
-            transition: color 0.3s ease;
+        .disclaimer-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .social-icon:hover {
-            color: #8e44ad;
+        .cta-btn {
+            background-color: #ffffff;
+            border: 2px solid #000000;
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 50px;
+            color: #000000;
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
         }
 
-        .footer-content p {
-            font-size: 14px;
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
+            color: white;
+            border-color: white;
+        }
+
+        .cta-btn .icon {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d1a4e3;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cta-btn:hover .icon {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px) scale(1.2);
         }
 
         /* Mobile-Friendly Styles */
@@ -175,7 +221,40 @@
     <!-- Hero Section -->
     <section class="hero">
         <h1>Become Part of Our Community</h1>
-        <p>Join us and start your fitness journey today!</p>
+        <p>Join us and start your fitness journey today! A healthier, happier you is just a click away.</p>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration-section">
+        <h2>Register Now</h2>
+        <div class="registration-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            
+            <!-- Credit Card Information -->
+            <input type="text" placeholder="Credit Card Number" required>
+            <input type="text" placeholder="Expiration Date (MM/YY)" required>
+            <input type="text" placeholder="CVV" required>
+            
+            <!-- Medical Disclaimer -->
+            <div class="disclaimer-section">
+                <label for="medical-disclaimer">I agree I'm in good health to participate.</label>
+                <input type="checkbox" id="medical-disclaimer" required>
+            </div>
+            
+            <!-- 24-Hour Notice -->
+            <div class="disclaimer-section">
+                <label for="notice">I acknowledge the 24-hour notice policy.</label>
+                <input type="checkbox" id="notice" required>
+            </div>
+
+            <!-- Submit Button -->
+            <a href="register.html" id="becomeMemberBtn" class="cta-btn">
+                Submit
+                <i class="fas fa-heart icon"></i> <!-- Heart Icon -->
+            </a>
+        </div>
     </section>
 
     <!-- Footer Section -->
