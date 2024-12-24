@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Registration</title>
+    <title>AM Living Fit - Register</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -79,19 +79,42 @@
             color: #ffffff;
         }
 
+        /* Hero Section with Gradient */
+        .hero {
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+
         /* Registration Form Section */
         .cta-section {
             text-align: center;
             padding: 50px 0;
+            background-color: white; /* White background for the registration form */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
         }
 
         .cta-section h2 {
-            font-size: 3em; /* Increased font size */
+            font-size: 3em; /* Larger heading */
             margin-bottom: 20px;
         }
 
         .cta-section p {
-            font-size: 1.5em; /* Increased font size */
+            font-size: 1.5em; /* Larger paragraph text */
             margin-bottom: 30px;
         }
 
@@ -195,10 +218,16 @@
         </ul>
     </header>
 
+    <!-- Hero Section with Gradient -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Become Part of Our Community</h1>
+            <p>Register Below!</p>
+        </div>
+    </section>
+
     <!-- Registration Form Section -->
     <section class="cta-section">
-        <h2>Become Part of Our Community</h2>
-        <p>Register Below!</p>
         <form class="registration-form" id="registrationForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
@@ -218,7 +247,7 @@
             
             <button type="submit">Submit Registration</button>
         </form>
-        <p id="successMessage" style="display:none; font-size: 1.2em; color: #27ae60;">You're all set! Welcome to the AM Living Fit family! 🎉</p>
+        <p id="successMessage" style="display:none; font-size: 1.5em; color: #27ae60;">You're all set! Welcome to the AM Living Fit family! 🎉</p>
     </section>
 
     <!-- Footer Section -->
