@@ -142,12 +142,12 @@
         }
 
         .cta-section h2 {
-            font-size: 2.5em;
+            font-size: 3em; /* Increased font size */
             margin-bottom: 20px;
         }
 
         .cta-section p {
-            font-size: 1.2em;
+            font-size: 1.5em; /* Increased font size */
             margin-bottom: 30px;
         }
 
@@ -225,7 +225,7 @@
             }
 
             .cta-section h2 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
 
             .hero-text h1 {
@@ -265,9 +265,9 @@
 
     <!-- Registration Form Section -->
     <section class="cta-section">
-        <h2>Register Now</h2>
-        <p>Join our community today by filling out the registration form below:</p>
-        <form class="registration-form">
+        <h2>Become Part of Our Community</h2>
+        <p>Register Below!</p>
+        <form class="registration-form" id="registrationForm">
             <input type="text" placeholder="Full Name" required>
             <input type="email" placeholder="Email Address" required>
             <input type="password" placeholder="Password" required>
@@ -286,6 +286,7 @@
             
             <button type="submit">Submit Registration</button>
         </form>
+        <p id="successMessage" style="display:none; font-size: 1.2em; color: #27ae60;">You're all set! Welcome to the AM Living Fit family! 🎉</p>
     </section>
 
     <!-- Footer Section -->
@@ -305,6 +306,14 @@
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Simulate form submission and show success message
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMessage').style.display = 'block';
+        });
+    </script>
 
 </body>
 </html>
