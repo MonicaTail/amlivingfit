@@ -136,8 +136,8 @@
         }
 
         .registration-form button {
-            background-color: #8e44ad;
-            color: white;
+            background-color: black; /* Black background */
+            color: white; /* White text */
             border: none;
             padding: 15px 30px;
             font-size: 18px;
@@ -145,10 +145,13 @@
             cursor: pointer;
             width: 100%;
             max-width: 250px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            transition: all 0.3s ease;
         }
 
         .registration-form button:hover {
-            background-color: #27ae60;
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Smooth gradient on hover */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
         }
 
         /* Footer */
