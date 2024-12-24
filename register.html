@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AM Living Fit - Register</title>
 
-    <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    
-    <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -252,19 +249,19 @@
 <body>
 
     <!-- Header with Navigation -->
-<header>
-    <div class="logo-container">
-         <a href="index.html"><img src="AMLOGO2.png" alt="AM Living Fit Logo"></a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="index.html" class="nav-item">Home</a></li>
-        <li><a href="bio.html" class="nav-item">Bio</a></li>
-        <li><a href="packages.html" class="nav-item">Our Packages</a></li>
-        <li><a href="mission.html" class="nav-item">Our Mission</a></li>
-        <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
-        <li><a href="register.html" class="nav-item">Register</a></li>
-    </ul>
-</header>
+    <header>
+        <div class="logo-container">
+            <a href="index.html"><img src="AMLOGO2.png" alt="AM Living Fit Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="bio.html" class="nav-item">Bio</a></li>
+            <li><a href="packages.html" class="nav-item">Our Packages</a></li>
+            <li><a href="mission.html" class="nav-item">Our Mission</a></li>
+            <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
+            <li><a href="register.html" class="nav-item">Register</a></li>
+        </ul>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -297,33 +294,8 @@
             <!-- Become a Member Button -->
             <a href="register.html" id="becomeMemberBtn" class="cta-btn">
                 Become a Member
-                <i class="fas fa-heart icon"></i> <!-- Heart Icon -->
+                <i class="fas fa-heart icon"></i>
             </a>
-
-            <!-- Message to display after click -->
-            <div id="funMessage" style="display:none; font-size: 20px; color: green; margin-top: 20px;">
-                You did it!
-            </div>
-
-            <script>
-                // Get the button and message elements
-                const button = document.getElementById("becomeMemberBtn");
-                const funMessage = document.getElementById("funMessage");
-
-                // Add click event listener
-                button.addEventListener("click", function(event) {
-                    event.preventDefault(); // Prevent navigation to 'register.html' temporarily
-                    
-                    // Show the fun message
-                    funMessage.style.display = "block";
-                    
-                    // Optionally, redirect to the registration page after a brief delay (e.g., 2 seconds)
-                    setTimeout(function() {
-                        window.location.href = "register.html";
-                    }, 2000); // 2-second delay
-                });
-            </script>
-
         </div>
     </section>
 
@@ -331,9 +303,15 @@
     <footer>
         <div class="footer-content">
             <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                <a href="mailto:info@livingfit.com" class="social-icon"><i class="fas fa-envelope"></i></a>
-                <a href="tel:+123456789" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
             </div>
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
