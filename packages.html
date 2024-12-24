@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Packages</title>
+    <title>AM Living Fit - Our Packages</title>
 
-    <!-- Google Fonts for consistent typography -->
+    <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome for social media icons -->
+    
+    <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -19,7 +19,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: #f9fafb;
+            background-color: #f7f9f8;
             color: #333;
         }
 
@@ -42,8 +42,15 @@
             text-align: center;
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
         .logo-container img {
-            width: 150px;
+            width: 150px; /* Resize the logo */
             height: auto;
         }
 
@@ -51,7 +58,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 15px;
+            padding-top: 20px;
         }
 
         .nav-item {
@@ -59,9 +66,6 @@
             font-size: 16px;
             padding: 10px 20px;
             transition: background-color 0.3s ease, color 0.3s ease;
-            background-color: white;  /* White background around the nav buttons */
-            border-radius: 5px;
-            border: 2px solid #fff;  /* White border */
         }
 
         .nav-item:hover {
@@ -70,30 +74,63 @@
             border: 2px solid white;
         }
 
-        .nav-item.active {
-            background-color: #f5f5dc; /* Soft white */
-            color: #333; /* Dark text for active item */
+        /* Button Styles */
+        .cta-btn {
+            background-color: #ffffff; /* White background by default */
+            border: 2px solid #000000; /* Black border */
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            color: #000000; /* Black text */
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .cta-btn:hover {
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Gradient background on hover */
+            color: white; /* White text when hovered */
+            border-color: white; /* White border on hover */
+        }
+
+        .cta-btn .icon {
+            position: absolute;
+            top: -20px; /* Position above the button */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #d1a4e3; /* Lighter purple than the button */
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        .cta-btn:hover .icon {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-10px) scale(1.2); /* Slightly enlarge the icon */
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #ff6f61, #ff8a00, #ff3d00);  /* Multi-color gradient matching index */
+            background: linear-gradient(135deg, #8e44ad, #27ae60);
             color: white;
-            padding: 100px 0;
+            padding: 80px 0;
             text-align: center;
         }
 
-        .hero h1 {
+        .hero-text h1 {
             font-size: 3em;
-            margin: 0;
+            margin-bottom: 20px;
         }
 
-        .hero p {
-            font-size: 1.5em;
-            margin: 10px 0 0;
+        .hero-text p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
         }
 
-        /* Package Cards */
+        /* Packages Section */
         .package-container {
             display: flex;
             justify-content: center;
@@ -140,48 +177,32 @@
             transform: scale(1.05);
         }
 
-        /* Buttons */
-        .cta-btn {
-            background-color: #000;
-            color: #fff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-size: 1em;
-            text-transform: uppercase;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-btn:hover {
-            background-color: #444;
-        }
-
-        /* Footer Styles */
+        /* Footer */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
+            background-color: #2c3e50;
             color: white;
             padding: 20px 0;
             text-align: center;
         }
 
         .social-media-links {
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .social-icon {
-            margin: 0 10px;
-            font-size: 1.8em;
+            margin: 0 15px;
+            font-size: 2em;
             color: white;
             transition: color 0.3s ease;
+            display: inline-block;
         }
 
         .social-icon:hover {
-            color: #1e8449;
+            color: #3498db;
         }
 
         .footer-content p {
-            margin-top: 15px;
+            margin: 10px 0;
         }
 
         /* Mobile-Friendly Styles */
@@ -191,13 +212,17 @@
                 gap: 10px;
             }
 
-            .package-container {
-                flex-direction: column;
-                gap: 20px;
+            .cta-btn {
+                font-size: 16px;
+                padding: 10px 20px;
             }
 
-            .package-card {
-                width: 90%;
+            .cta-section h2 {
+                font-size: 2em;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
             }
         }
     </style>
@@ -212,7 +237,7 @@
         <ul class="nav-links">
             <li><a href="index.html" class="nav-item">Home</a></li>
             <li><a href="bio.html" class="nav-item">Bio</a></li>
-            <li><a href="packages.html" class="nav-item active">Our Packages</a></li>
+            <li><a href="packages.html" class="nav-item">Our Packages</a></li>
             <li><a href="mission.html" class="nav-item">Our Mission</a></li>
             <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
             <li><a href="register.html" class="nav-item">Register</a></li>
@@ -221,8 +246,10 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Our Packages</h1>
-        <p>Find the plan that's right for you.</p>
+        <div class="hero-text">
+            <h1>Our Packages</h1>
+            <p>Find the plan that's right for you.</p>
+        </div>
     </section>
 
     <!-- Packages Section -->
@@ -249,12 +276,20 @@
 
     <!-- Footer Section -->
     <footer>
-        <div class="social-media-links">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
-            <a href="#" class="social-icon"><i class="fas fa-phone-alt"></i></a>
+        <div class="footer-content">
+            <div class="social-media-links">
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
-        <p>© 2024 AM Living Fit. All rights reserved.</p>
     </footer>
 
 </body>
