@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Amanda  - Instructor Bio</title>
+    <title>AM Living Fit - Mission</title>
+
+    <!-- Link to Google Fonts for modern typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
     <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -12,10 +15,11 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f7f6;
             color: #333;
         }
 
@@ -47,67 +51,59 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            padding-top: 20px;
         }
 
-.nav-item {
-    color: #ffffff;
-    font-size: 16px;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+        .nav-item {
+            color: #ffffff;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
 
-.nav-item:hover {
-    background-color: #34495e; /* Slightly darker on hover */
-    border-radius: 5px;
-    border: 2px solid white; /* White border on hover */
-}
-
+        .nav-item:hover {
+            background-color: #34495e; /* Slightly darker on hover */
+            border-radius: 5px;
+            border: 2px solid white; /* White border on hover */
+        }
 
         .nav-item.active {
             background-color: #8e44ad;
             color: #ffffff;
         }
 
-        /* Bio Section */
-        .bio-background {
-            background: linear-gradient(135deg, #8e44ad, #27ae60);
-            padding: 60px 20px;
+        /* Mission Section Styles */
+        .mission-background {
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Purple to Green Gradient */
+            padding: 70px 20px; /* Increased padding to make the gradient section taller */
             text-align: center;
-            position: relative;
         }
 
-        .bio-background img {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-            border: 5px solid white; /* White border around the picture */
+        .mission-title {
+            color: white;
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
-        .bio-container {
-            margin: 30px auto;
-            padding: 30px 20px;
-            background-color: #ffffff;
-            color: #333;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        .mission-section {
+            background-color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .mission-container {
             max-width: 800px;
-        
-
+            margin: auto;
         }
 
-        .bio-text {
+        .mission-text {
             font-size: 1.2em;
             line-height: 1.8;
-            margin: 10px 0;
-            text-align: center; /* Justified text */
+            color: #333;
         }
 
         /* Footer Styles */
         footer {
-            background: linear-gradient(135deg, #27ae60, #8e44ad);
+            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -140,25 +136,22 @@
                 gap: 10px;
             }
 
-            .bio-container {
-                padding: 30px 10px;
+            .mission-title {
+                font-size: 2em;
             }
 
-            .bio-text {
+            .mission-text {
                 font-size: 1em;
-            }
-
-            .bio-background img {
-                width: 150px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Header with Navigation -->
     <header>
         <div class="logo-container">
-             <a href="index.html"><img src="AMLOGO2.png" alt="AM Living Fit Logo"></a>
+            <a href="index.html"><img src="AMLOGO2.png" alt="AM Living Fit Logo"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-item">Home</a></li>
@@ -170,22 +163,23 @@
         </ul>
     </header>
 
-    <!-- Bio Section with Gradient Background -->
-    <section class="bio-background">
-        <img src="amandapic.jpg" alt="Amanda - Bio">
+    <!-- Mission Section with Background Gradient -->
+    <section class="mission-background">
+        <h1 class="mission-title">Our Mission</h1>
     </section>
 
-    <!-- Bio Content Section -->
-    <div class="bio-container">
-        
-            <p class="bio-text">
-                Amanda is a passionate and experienced fitness instructor who has dedicated her life to helping others achieve their health and wellness goals. With years of experience in strength training, yoga, and holistic fitness, Amanda brings a personalized and balanced approach to every client.
-            </p>
-            <p class="bio-text">
-                Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
+    <!-- Mission Content Section with Full-Width White Background -->
+    <section class="mission-section">
+        <div class="mission-container">
+            <p class="mission-text">
+                At AM Living, we believe that true wellness is achieved through a harmonious balance of mind, body, and spirit. 
+                Our mission is to empower individuals on their journey to optimal health by providing holistic fitness solutions, 
+                personalized guidance, and a supportive community. We are dedicated to inspiring every person to embrace a lifestyle 
+                that nurtures their physical strength, mental clarity, and emotional resilience. Together, we strive to cultivate a 
+                vibrant, healthy, and fulfilling life for all.
             </p>
         </div>
-    </div>
+    </section>
 
     <!-- Footer Section -->
     <footer>
@@ -204,5 +198,6 @@
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
