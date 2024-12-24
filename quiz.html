@@ -65,12 +65,18 @@
             color: #ffffff;
             font-size: 16px;
             padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .nav-item:hover {
             background-color: #34495e;
             border-radius: 5px;
             border: 2px solid white;
+        }
+
+        .nav-item.active {
+            background-color: #8e44ad;
+            color: #ffffff;
         }
 
         /* Button Styles */
@@ -131,32 +137,44 @@
 
         /* Quiz Form Section */
         .quiz-container {
-            padding: 50px;
+            padding: 40px;
             background-color: #ffffff;
             max-width: 800px;
-            margin: 30px auto;
+            margin: 50px auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            font-family: 'Poppins', Arial, sans-serif;
+            text-align: center; /* Center the text inside the quiz container */
         }
 
         .quiz-container h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
-            text-align: center;
+            color: #333;
         }
 
         .quiz-container label {
             font-size: 1.2em;
             margin-bottom: 10px;
             display: block;
+            color: #555;
+        }
+
+        .quiz-container .options {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center; /* Center the options */
         }
 
         .quiz-container input[type="radio"] {
             margin-right: 10px;
         }
 
+        /* Submit Button - Black background */
         .quiz-container .submit-btn {
-            background-color: #8e44ad;
+            background-color: #000000; /* Black background */
             color: white;
             padding: 15px 30px;
             border: none;
@@ -168,70 +186,21 @@
             width: 100%;
             margin-top: 20px;
             transition: background-color 0.3s ease;
-        }
-
-        .quiz-container .submit-btn:hover {
-            background-color: #27ae60;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px 0;
             text-align: center;
         }
 
-        .social-media-links {
-            margin-bottom: 10px;
+        .quiz-container .submit-btn:hover {
+            background-color: #333333; /* Slightly darker black for hover */
         }
 
-        .social-icon {
-            margin: 0 15px;
-            font-size: 2em;
-            color: white;
-            transition: color 0.3s ease;
-            display: inline-block;
+        .quiz-container .submit-btn:focus {
+            outline: none; /* Remove the focus outline */
         }
 
-        .social-icon:hover {
-            color: #3498db;
-        }
-
-        .footer-content p {
-            margin: 10px 0;
-        }
-
-        /* Mobile-Friendly Styles */
+        /* Mobile-friendly styling */
         @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .cta-btn {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 2em;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
-            }
-
-            .quiz-container {
-                padding: 30px;
-            }
-
-            .quiz-container h2 {
-                font-size: 2em;
-            }
-
-            .quiz-container label {
-                font-size: 1em;
+            .quiz-container .options {
+                grid-template-columns: 1fr 1fr; /* Two columns on smaller screens */
             }
         }
     </style>
@@ -258,6 +227,10 @@
         <div class="hero-text">
             <h1>Take the Quiz</h1>
             <p>Start your journey towards a healthier lifestyle. Take the quiz to receive personalized recommendations.</p>
+            <a href="quiz.html" class="cta-btn">
+                Start Quiz
+                <i class="fas fa-arrow-right icon"></i>
+            </a>
         </div>
     </section>
 
@@ -267,24 +240,51 @@
         <form action="#" method="POST">
             <div class="question">
                 <label for="q1">How often do you exercise?</label>
-                <input type="radio" name="q1" value="Never" id="q1"> Never
-                <input type="radio" name="q1" value="Once a week" id="q2"> Once a week
-                <input type="radio" name="q1" value="3-4 times a week" id="q3"> 3-4 times a week
-                <input type="radio" name="q1" value="Daily" id="q4"> Daily
+                <div class="options">
+                    <label><input type="radio" name="q1" value="Never" id="q1"> Never</label>
+                    <label><input type="radio" name="q1" value="Once a week" id="q2"> Once a week</label>
+                    <label><input type="radio" name="q1" value="3-4 times a week" id="q3"> 3-4 times a week</label>
+                    <label><input type="radio" name="q1" value="Daily" id="q4"> Daily</label>
+                </div>
             </div>
 
             <div class="question">
                 <label for="q2">What is your primary fitness goal?</label>
-                <input type="radio" name="q2" value="Lose weight" id="q5"> Lose weight
-                <input type="radio" name="q2" value="Build muscle" id="q6"> Build muscle
-                <input type="radio" name="q2" value="Improve endurance" id="q7"> Improve endurance
+                <div class="options">
+                    <label><input type="radio" name="q2" value="Lose weight" id="q5"> Lose weight</label>
+                    <label><input type="radio" name="q2" value="Build muscle" id="q6"> Build muscle</label>
+                    <label><input type="radio" name="q2" value="Improve endurance" id="q7"> Improve endurance</label>
+                    <label><input type="radio" name="q2" value="Increase flexibility" id="q8"> Increase flexibility</label>
+                </div>
             </div>
 
             <div class="question">
                 <label for="q3">What type of exercise do you prefer?</label>
-                <input type="radio" name="q3" value="Cardio" id="q8"> Cardio
-                <input type="radio" name="q3" value="Strength training" id="q9"> Strength training
-                <input type="radio" name="q3" value="Yoga" id="q10"> Yoga
+                <div class="options">
+                    <label><input type="radio" name="q3" value="Cardio" id="q9"> Cardio</label>
+                    <label><input type="radio" name="q3" value="Strength training" id="q10"> Strength training</label>
+                    <label><input type="radio" name="q3" value="Yoga" id="q11"> Yoga</label>
+                    <label><input type="radio" name="q3" value="HIIT" id="q12"> HIIT</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q4">How long have you been working out?</label>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="Less than a month" id="q13"> Less than a month</label>
+                    <label><input type="radio" name="q4" value="1-6 months" id="q14"> 1-6 months</label>
+                    <label><input type="radio" name="q4" value="6 months - 1 year" id="q15"> 6 months - 1 year</label>
+                    <label><input type="radio" name="q4" value="More than a year" id="q16"> More than a year</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="q5">What is your typical workout intensity?</label>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="Low" id="q17"> Low</label>
+                    <label><input type="radio" name="q5" value="Moderate" id="q18"> Moderate</label>
+                    <label><input type="radio" name="q5" value="High" id="q19"> High</label>
+                </div>
             </div>
 
             <button type="submit" class="submit-btn">Submit Quiz</button>
