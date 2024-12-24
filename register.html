@@ -20,8 +20,8 @@
             color: #333;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            height: auto;
             flex-direction: column;
         }
 
@@ -87,9 +87,9 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(to right, #8e44ad, #8e44ad); /* Consistent Gradient with Index */
+            background: linear-gradient(to right, #8e44ad, #27ae60); /* Consistent Gradient */
             color: white;
-            padding: 80px 0;
+            padding: 100px 0;
             text-align: center;
             margin-top: 120px; /* Push the hero section down below the header */
             width: 100%;
@@ -108,43 +108,42 @@
 
         /* Registration Section */
         .registration-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background-color: white;
             width: 100%;
             padding: 40px 20px;
-            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px; /* Slight overlap with hero section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .registration-section h2 {
+        .registration-container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .registration-container h2 {
             font-size: 2.5em;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .registration-form {
             display: flex;
             flex-direction: column;
-            align-items: center;
             gap: 15px;
-            max-width: 400px;
-            width: 100%;
+            align-items: center;
         }
 
         .registration-form input {
-            padding: 10px;
+            padding: 12px;
             font-size: 16px;
             width: 100%;
             max-width: 350px;
-            margin-bottom: 10px;
             border: 2px solid #ccc;
             border-radius: 5px;
-        }
-
-        .disclaimer-section {
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         .cta-btn {
@@ -159,7 +158,6 @@
             display: inline-block;
             transition: all 0.3s ease-in-out;
             position: relative;
-            text-align: center;
             margin-top: 20px;
         }
 
@@ -258,34 +256,36 @@
 
     <!-- Registration Section -->
     <section class="registration-section">
-        <h2>Register Now</h2>
-        <div class="registration-form">
-            <!-- Name and Email Fields -->
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="password" placeholder="Password" required>
+        <div class="registration-container">
+            <h2>Register Now</h2>
+            <form class="registration-form">
+                <!-- Name and Email Fields -->
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
 
-            <!-- Credit Card Information -->
-            <input type="text" placeholder="Credit Card Number" required>
-            <input type="text" placeholder="Expiration Date (MM/YY)" required>
-            <input type="text" placeholder="CVV" required>
+                <!-- Credit Card Information -->
+                <input type="text" placeholder="Credit Card Number" required>
+                <input type="text" placeholder="Expiration Date (MM/YY)" required>
+                <input type="text" placeholder="CVV" required>
 
-            <!-- Medical Disclaimer -->
-            <div class="disclaimer-section">
-                <label for="medical-disclaimer">I agree I'm in good health to participate.</label>
-                <input type="checkbox" id="medical-disclaimer" required>
-            </div>
+                <!-- Medical Disclaimer -->
+                <div class="disclaimer-section">
+                    <label for="medical-disclaimer">I agree I'm in good health to participate.</label>
+                    <input type="checkbox" id="medical-disclaimer" required>
+                </div>
 
-            <!-- 24-Hour Notice -->
-            <div class="disclaimer-section">
-                <label for="notice">I acknowledge the 24-hour notice policy.</label>
-                <input type="checkbox" id="notice" required>
-            </div>
+                <!-- 24-Hour Notice -->
+                <div class="disclaimer-section">
+                    <label for="notice">I acknowledge the 24-hour notice policy.</label>
+                    <input type="checkbox" id="notice" required>
+                </div>
 
-            <!-- Submit Button -->
-            <a href="register.html" id="submitBtn" class="cta-btn">
-                Submit Registration
-            </a>
+                <!-- Submit Button -->
+                <a href="register.html" id="submitBtn" class="cta-btn">
+                    Submit Registration
+                </a>
+            </form>
         </div>
     </section>
 
