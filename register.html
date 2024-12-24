@@ -90,7 +90,7 @@
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(90deg, #00d2ff, #3a7bd5); /* Original gradient */
+            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Correct gradient */
             color: white;
             padding: 80px 0;
             text-align: center;
@@ -143,19 +143,24 @@
             border-radius: 5px;
         }
 
-        /* Centered Disclaimer Section */
-        .disclaimer-section {
+        /* Centered Fields (CVV, Disclaimer) */
+        .centered-fields {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
             width: 100%;
             text-align: center;
         }
 
-        .disclaimer-section label {
+        .centered-fields input {
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .centered-fields label {
             font-size: 16px;
-            margin-right: 10px;
         }
 
         /* Become a Member Button */
@@ -278,16 +283,13 @@
             <!-- Credit Card Information -->
             <input type="text" placeholder="Credit Card Number" required>
             <input type="text" placeholder="Expiration Date (MM/YY)" required>
-            <input type="text" placeholder="CVV" required>
             
-            <!-- Medical Disclaimer (Centered) -->
-            <div class="disclaimer-section">
+            <!-- Centered Fields (CVV, Disclaimer) -->
+            <div class="centered-fields">
+                <input type="text" placeholder="CVV" required>
                 <label for="medical-disclaimer">I agree I'm in good health to participate.</label>
                 <input type="checkbox" id="medical-disclaimer" required>
-            </div>
-            
-            <!-- 24-Hour Notice (Centered) -->
-            <div class="disclaimer-section">
+                
                 <label for="notice">I acknowledge the 24-hour notice policy.</label>
                 <input type="checkbox" id="notice" required>
             </div>
