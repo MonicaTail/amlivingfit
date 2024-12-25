@@ -79,12 +79,20 @@
             color: #ffffff;
         }
 
-        /* Hero Section - Same size as index page */
+        /* Hero Section - Adjusted for Amanda's Photo */
         .hero {
             background-color: #757171; /* Earthy purple */
             color: white;
             padding: 40px 0; /* Same padding as index page */
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-text {
+            margin-bottom: 20px; /* Space between text and image */
         }
 
         .hero-text h1 {
@@ -95,6 +103,14 @@
         .hero-text p {
             font-size: 1.3em; /* Same font size as index hero */
             margin-bottom: 30px;
+        }
+
+        /* Amanda's Picture Styling */
+        .hero img {
+            max-width: 80%; /* Image takes up 80% width of hero */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         /* Bio Section */
@@ -184,6 +200,8 @@
             <h1>Meet Amanda</h1>
             <p>Learn more about Amanda's journey in fitness and wellness below</p>
         </div>
+        <!-- Amanda's Image -->
+        <img src="amandapic.jpg" alt="Amanda's Photo">
     </section>
 
     <!-- Bio Section -->
