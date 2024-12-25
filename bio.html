@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Amanda's Bio</title>
+    <title>AM Living Fit - Your Path to a Healthier Lifestyle</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -74,18 +74,21 @@
             border: 2px solid white;
         }
 
-        /* Hero Section - Replace with Amanda's picture */
+        .nav-item.active {
+            background-color: #8e44ad;
+            color: #ffffff;
+        }
+
+        /* Hero Section - Darker Muted Purple-Brown */
         .hero {
-            background-image: url('amandapic.jpg');
-            background-size: cover;
-            background-position: center;
+            background-color: #757171; /* Earthy purple */
             color: white;
-            padding: 40px 0;
+            padding: 40px 0; /* Reduced padding to make it smaller */
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 2.5em;
+            font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
         }
 
@@ -94,7 +97,7 @@
             margin-bottom: 30px;
         }
 
-        /* Bio Information Section */
+        /* Bio Section (with Amanda's picture) */
         .bio-info {
             background-color: #f7f9f8;
             padding: 40px;
@@ -112,6 +115,16 @@
             line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
+        }
+
+        .bio-image {
+            margin-top: 20px;
+        }
+
+        .bio-image img {
+            max-width: 300px; /* Resize Amanda's image */
+            height: auto;
+            border-radius: 10px;
         }
 
         /* Footer Styles */
@@ -154,7 +167,7 @@
                 padding: 10px 20px;
             }
 
-            .bio-info h2 {
+            .cta-section h2 {
                 font-size: 2em;
             }
 
@@ -176,19 +189,20 @@
             <li><a href="bio.html" class="nav-item">Bio</a></li>
             <li><a href="packages.html" class="nav-item">Our Packages</a></li>
             <li><a href="mission.html" class="nav-item">Our Mission</a></li>
+            <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
             <li><a href="register.html" class="nav-item">Register</a></li>
         </ul>
     </header>
 
-    <!-- Hero Section (with Amanda's picture) -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Amanda's Bio</h1>
-            <p>Get to know our dedicated fitness instructor, Amanda.</p>
+            <h1>Welcome to AM Living Fit</h1>
+            <p>Your journey to better health and fitness starts right here</p>
         </div>
     </section>
 
-    <!-- Bio Information Section -->
+    <!-- Bio Information Section (Updated with Amanda's details) -->
     <section class="bio-info">
         <h2>Meet Amanda</h2>
         <p>
@@ -197,6 +211,11 @@
         <p>
             Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
         </p>
+
+        <!-- Amanda's Image -->
+        <div class="bio-image">
+            <img src="amandapic.jpg" alt="Amanda's Picture">
+        </div>
     </section>
 
     <!-- Footer Section -->
