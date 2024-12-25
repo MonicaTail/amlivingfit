@@ -97,14 +97,6 @@
             margin-bottom: 30px;
         }
 
-        /* Line separator between title and description in Hero Section */
-        .hero-text hr {
-            border: 0;
-            border-top: 2px solid #ffffff; /* White line */
-            width: 80%;
-            margin: 20px auto;
-        }
-
         /* Bio Section (with Amanda's picture) */
         .bio-info {
             background-color: #f7f9f8;
@@ -126,15 +118,19 @@
             margin: 0 auto;
         }
 
-        /* Line separator */
-        hr {
-            border: 0;
-            border-top: 1px solid #ddd;
-            margin: 40px 0; /* Add spacing around the line */
+        .bio-info .separator {
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background-color: white;
+            margin: 0 10px;
+            vertical-align: middle;
         }
 
+        /* Center Amanda's picture */
         .bio-image {
             margin-top: 20px;
+            text-align: center; /* Centering the image */
         }
 
         .bio-image img {
@@ -215,9 +211,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>Meet Amanda</h1>
-            <p>Health Coach / Motivator / Instructor</p>
-            <!-- Line separator between description and title -->
-            <hr>
+            <p>Health Coach <span class="separator"></span> Motivator <span class="separator"></span> Instructor</p>
         </div>
     </section>
 
@@ -229,9 +223,6 @@
         <p>
             Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
         </p>
-
-        <!-- Line separator -->
-        <hr>
 
         <!-- Amanda's Image -->
         <div class="bio-image">
