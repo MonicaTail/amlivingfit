@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Your Path to a Healthier Lifestyle</title>
+    <title>AM Living Fit - Meet Amanda</title>
 
+    <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
+        /* Global Styles */
         body {
             font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
@@ -19,34 +23,15 @@
             color: #333;
         }
 
-        /* Hero Section Styles */
-        .hero {
-            background-color: #757171; /* Earthy purple */
-            color: white;
-            padding: 80px 0; /* Adjust padding to fit content better */
-            text-align: center;
-            position: relative; /* Position the child elements inside */
+        a {
+            text-decoration: none;
+            color: inherit;
         }
 
-        .hero-text h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .hero-text p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-        }
-
-        .amanda-image {
-            width: 200px; /* Adjust the image size */
-            height: 200px; /* Make it circular */
-            border-radius: 50%; /* Circular image */
-            object-fit: cover; /* Ensures it fits well without distortion */
-            position: absolute;
-            bottom: -50px; /* Position the image inside the hero section */
-            left: 50%;
-            transform: translateX(-50%); /* Center horizontally */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
         }
 
         /* Header Styles */
@@ -57,8 +42,15 @@
             text-align: center;
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
         .logo-container img {
-            width: 150px;
+            width: 150px; /* Resize the logo */
             height: auto;
         }
 
@@ -73,10 +65,68 @@
             color: #ffffff;
             font-size: 16px;
             padding: 10px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .nav-item:hover {
             background-color: #34495e;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        .nav-item.active {
+            background-color: #8e44ad;
+            color: #ffffff;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #757171; /* Earthy purple */
+            color: white;
+            padding: 40px 0; /* Reduced padding to match */
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-text h1 {
+            font-size: 2.5em; /* Slightly smaller font size */
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+
+        .amanda-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-top: 20px; /* Adding space between text and image */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Bio Section */
+        .bio-section {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .bio-section h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .bio-section p {
+            font-size: 1.2em;
+            color: #666;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Footer Styles */
@@ -106,18 +156,39 @@
         .footer-content p {
             margin: 10px 0;
         }
+
+        /* Mobile-Friendly Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
+    <!-- Header with Navigation -->
     <header>
         <div class="logo-container">
             <a href="index.html"><img src="AMLOGO2.png" alt="AM Living Fit Logo"></a>
         </div>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="bio.html" class="nav-item">Bio</a></li>
+            <li><a href="bio.html" class="nav-item active">Bio</a></li>
             <li><a href="packages.html" class="nav-item">Our Packages</a></li>
             <li><a href="mission.html" class="nav-item">Our Mission</a></li>
             <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
@@ -125,14 +196,21 @@
         </ul>
     </header>
 
-    <!-- Hero Section with Amanda's Picture -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Welcome to AM Living Fit</h1>
-            <p>Your journey to better health and fitness starts right here</p>
+            <h1>Meet Amanda</h1>
+            <p>Founder of AM Living Fit</p>
         </div>
-        <!-- Amanda's Picture Inside Hero Section -->
-        <img src="amanda_pic.jpg" alt="Amanda Picture" class="amanda-image">
+        <img class="amanda-img" src="amanda-pic.jpg" alt="Amanda's picture">
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio-section">
+        <h2>Amanda's Journey</h2>
+        <p>
+            Amanda is a passionate fitness coach with years of experience in helping people achieve their health goals. She started AM Living Fit with the vision to create a community where everyone, regardless of their fitness level, can feel motivated and supported. Amanda specializes in creating customized fitness plans that work for each individual, no matter their starting point. Her goal is to inspire you to lead a healthier and happier lifestyle.
+        </p>
     </section>
 
     <!-- Footer Section -->
