@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Health Quiz</title>
+    <title>AM Living Fit - Take the Quiz</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
         }
 
         .logo-container img {
-            width: 150px; /* Resize the logo */
+            width: 150px;
             height: auto;
         }
 
@@ -74,16 +74,21 @@
             border: 2px solid white;
         }
 
-        /* Hero Section with Gradient */
+        .nav-item.active {
+            background-color: #8e44ad;
+            color: #ffffff;
+        }
+
+        /* Hero Section - Darker Muted Purple-Brown */
         .hero {
-            background: linear-gradient(135deg, #8e44ad, #27ae60); /* Gradient added here */
+            background-color:#757171; /* Earthy purple */
             color: white;
-            padding: 80px 0;
+            padding: 40px 0;
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
@@ -92,70 +97,54 @@
             margin-bottom: 30px;
         }
 
-        /* Quiz Section */
-        .quiz-container {
-            background-color: #ffffff;
-            padding: 40px;
-            max-width: 700px;
-            margin: 40px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Form Section */
+        .form-container {
+            padding: 30px 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
             border-radius: 8px;
-            text-align: center; /* Center the content */
         }
 
-        h2 {
-            font-size: 2.5em;
+        .form-container h2 {
+            text-align: center;
             margin-bottom: 20px;
         }
 
-        .question {
+        .form-container .question {
             margin-bottom: 20px;
         }
 
-        label {
-            font-size: 1.2em;
+        .form-container label {
             display: block;
+            font-size: 1.1em;
             margin-bottom: 10px;
-            color: #555;
         }
 
-        .options {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center the options */
+        .form-container input[type="radio"] {
+            margin-right: 10px;
         }
 
-        .options label {
-            margin-bottom: 8px;
-            text-align: left; /* Left-align the radio button text */
-        }
-
-       .submit-btn {
-    background-color: black; /* Black background */
-    color: white; /* White text */
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
-    border-radius: 50px;
-    cursor: pointer;
-    width: 100%;
-    max-width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    transition: all 0.3s ease;
-}
-
-
-        .submit-btn:hover {
-            background-color: #333333;
-        }
-
-        .submit-btn:focus {
-            outline: none;
-        }
-
-        /* Footer Styles (Unchanged) */
-        footer {
+        .form-container button.submit-btn {
+            width: 100%;
             background-color: #2c3e50;
+            color: white;
+            font-size: 1.1em;
+            padding: 12px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button.submit-btn:hover {
+            background-color: #34495e;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, #2c3e50, #000000);
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -180,23 +169,6 @@
         .footer-content p {
             margin: 10px 0;
         }
-
-        /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            .quiz-container {
-                padding: 30px;
-                max-width: 90%;
-            }
-
-            .submit-btn {
-                font-size: 14px;
-                padding: 10px 20px;
-            }
-        }
-.question label {
-    font-weight: bold; /* Make the question text bold */
-}
-
     </style>
 </head>
 <body>
@@ -219,74 +191,55 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Personalized Health Quiz</h1>
-            <p>Answer the questions below to get personalized recommendations for your fitness journey.</p>
+            <h1>Welcome to AM Living Fit</h1>
+            <p>Your journey to better health and fitness starts right here</p>
         </div>
     </section>
 
-    <!-- Quiz Section -->
-    <section class="quiz-container">
-        <h2>Health Quiz</h2>
-        <form id="quizForm" action="#" method="POST">
+    <!-- Quiz Form Section -->
+    <section class="form-container">
+        <h2>Take Our Quiz</h2>
+        <form action="results.html">
             <!-- Question 1 -->
             <div class="question">
-                <label for="q1">How often do you exercise?</label>
-                <div class="options">
-                    <label><input type="radio" name="q1" value="1"> Never</label>
-                    <label><input type="radio" name="q1" value="2"> Once a week</label>
-                    <label><input type="radio" name="q1" value="3"> 3-4 times a week</label>
-                    <label><input type="radio" name="q1" value="4"> Daily</label>
-                </div>
+                <label>How often do you exercise?</label>
+                <label><input type="radio" name="q1" value="1"> Never</label>
+                <label><input type="radio" name="q1" value="2"> Rarely</label>
+                <label><input type="radio" name="q1" value="3"> Occasionally</label>
+                <label><input type="radio" name="q1" value="4"> Regularly</label>
             </div>
 
             <!-- Question 2 -->
             <div class="question">
-                <label for="q2">What is your primary fitness goal?</label>
-                <div class="options">
-                    <label><input type="radio" name="q2" value="1"> Lose weight</label>
-                    <label><input type="radio" name="q2" value="2"> Build muscle</label>
-                    <label><input type="radio" name="q2" value="3"> Improve endurance</label>
-                    <label><input type="radio" name="q2" value="4"> Increase flexibility</label>
-                </div>
+                <label>What is your fitness goal?</label>
+                <label><input type="radio" name="q2" value="1"> Lose Weight</label>
+                <label><input type="radio" name="q2" value="2"> Build Muscle</label>
+                <label><input type="radio" name="q2" value="3"> Improve Endurance</label>
+                <label><input type="radio" name="q2" value="4"> General Health</label>
             </div>
 
             <!-- Question 3 -->
             <div class="question">
-                <label for="q3">What type of exercise do you prefer?</label>
-                <div class="options">
-                    <label><input type="radio" name="q3" value="1"> Cardio</label>
-                    <label><input type="radio" name="q3" value="2"> Strength training</label>
-                    <label><input type="radio" name="q3" value="3"> Yoga</label>
-                    <label><input type="radio" name="q3" value="4"> HIIT</label>
-                </div>
+                <label>Do you have any medical conditions?</label>
+                <label><input type="radio" name="q3" value="1"> No</label>
+                <label><input type="radio" name="q3" value="2"> Yes</label>
             </div>
 
             <!-- Question 4 -->
             <div class="question">
-                <label for="q4">How much time can you dedicate to working out each week?</label>
-                <div class="options">
-                    <label><input type="radio" name="q4" value="1"> Less than 2 hours</label>
-                    <label><input type="radio" name="q4" value="2"> 2-4 hours</label>
-                    <label><input type="radio" name="q4" value="3"> 4-6 hours</label>
-                    <label><input type="radio" name="q4" value="4"> More than 6 hours</label>
-                </div>
-            </div>
-
-            <!-- Question 5 -->
-            <div class="question">
-                <label for="q5">Do you have any medical conditions that we should know about?</label>
-                <div class="options">
-                    <label><input type="radio" name="q5" value="1"> Yes</label>
-                    <label><input type="radio" name="q5" value="2"> No</label>
-                </div>
+                <label>How much time can you dedicate to working out each week?</label>
+                <label><input type="radio" name="q4" value="1"> Less than 2 hours</label>
+                <label><input type="radio" name="q4" value="2"> 2-4 hours</label>
+                <label><input type="radio" name="q4" value="3"> 4-6 hours</label>
+                <label><input type="radio" name="q4" value="4"> More than 6 hours</label>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Submit</button>
+            <button type="submit" class="submit-btn">Get Your Recommendation</button>
         </form>
     </section>
 
-   <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <div class="social-media-links">
