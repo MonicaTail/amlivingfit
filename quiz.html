@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Your Path to a Healthier Lifestyle</title>
+    <title>AM Living Fit - Quiz</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -81,14 +81,14 @@
 
         /* Hero Section */
         .hero {
-            background-color:#757171; /* Earthy purple */
+            background-color: #757171; /* Earthy purple */
             color: white;
-            padding: 40px 0;
+            padding: 40px 0; /* Reduced padding to make it smaller */
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 2.5em;
+            font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
         }
 
@@ -97,51 +97,73 @@
             margin-bottom: 30px;
         }
 
-        /* Quiz Form Section */
-        .form-container {
-            padding: 30px 20px;
-            background-color: white;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 20px auto;
-            max-width: 600px;
-            border-radius: 8px;
-        }
-
-        .form-container h2 {
+        /* Call to Action Section */
+        .cta-section {
             text-align: center;
-            margin-top: -40px; /* Adjusted to move the heading up */
-            margin-bottom: 20px;
-            color: #ffffff;
+            padding: 20px 0;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
-        .form-container .question {
+        .cta-section h2 {
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .form-container label {
-            display: block;
+        .cta-section p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        /* Style for Buttons */
+        .cta-btn {
+            display: inline-block;
+            background-color: #2c3e50; /* Same color as header */
+            color: white;
+            padding: 10px 20px;
             font-size: 1.1em;
-            margin-bottom: 10px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px; /* Round buttons */
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .form-container input[type="radio"] {
-            margin-right: 10px;
+        .cta-btn:hover {
+            background-color: #34495e;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        .form-container button.submit-btn {
-            width: 100%;
+        /* Quiz Section */
+        .quiz-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .quiz-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .quiz-question {
+            margin: 20px 0;
+            font-size: 1.3em;
+        }
+
+        .quiz-option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
             background-color: #2c3e50;
             color: white;
             font-size: 1.1em;
-            padding: 12px;
             border: none;
-            border-radius: 50px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
         }
 
-        .form-container button.submit-btn:hover {
+        .quiz-option:hover {
             background-color: #34495e;
         }
 
@@ -215,78 +237,75 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Welcome to AM Living Fit</h1>
-            <p>Your journey to better health and fitness starts right here</p>
+            <h1>Take the AM Living Fit Quiz</h1>
+            <p>Find the perfect fitness plan tailored just for you</p>
         </div>
     </section>
 
-    <!-- Quiz Form Section -->
-    <section class="form-container">
-        <h2>Take Our Quiz</h2>
-        <form id="quizForm">
-            <!-- Question 1 -->
-            <div class="question">
-                <label>How often do you exercise?</label>
-                <label><input type="radio" name="q1" value="Never"> Never</label>
-                <label><input type="radio" name="q1" value="Rarely"> Rarely</label>
-                <label><input type="radio" name="q1" value="Occasionally"> Occasionally</label>
-                <label><input type="radio" name="q1" value="Regularly"> Regularly</label>
+    <!-- Quiz Section -->
+    <section class="quiz-section">
+        <h2>Answer these questions to get your personalized plan</h2>
+
+        <form action="" method="post">
+            <div class="quiz-question">
+                <label for="fitness-level">How often do you work out?</label>
+                <select name="fitness-level" id="fitness-level">
+                    <option value="beginner">Never or rarely</option>
+                    <option value="intermediate">Occasionally</option>
+                    <option value="advanced">Regularly</option>
+                </select>
             </div>
 
-            <!-- Question 2 -->
-            <div class="question">
-                <label>What is your fitness goal?</label>
-                <label><input type="radio" name="q2" value="Lose Weight"> Lose Weight</label>
-                <label><input type="radio" name="q2" value="Build Muscle"> Build Muscle</label>
-                <label><input type="radio" name="q2" value="Improve Endurance"> Improve Endurance</label>
-                <label><input type="radio" name="q2" value="General Health"> General Health</label>
+            <div class="quiz-question">
+                <label for="medical-conditions">Do you have any medical conditions?</label>
+                <select name="medical-conditions" id="medical-conditions">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </div>
 
-            <!-- Question 3 -->
-            <div class="question">
-                <label>Do you have any medical conditions?</label>
-                <label><input type="radio" name="q3" value="No"> No</label>
-                <label><input type="radio" name="q3" value="Yes"> Yes</label>
+            <div class="quiz-question">
+                <label for="goal">What is your primary fitness goal?</label>
+                <select name="goal" id="goal">
+                    <option value="weight-loss">Weight Loss</option>
+                    <option value="muscle-gain">Muscle Gain</option>
+                    <option value="general-fitness">General Fitness</option>
+                </select>
             </div>
 
-            <!-- Question 4 -->
-            <div class="question">
-                <label>What is your age range?</label>
-                <label><input type="radio" name="q4" value="Under 18"> Under 18</label>
-                <label><input type="radio" name="q4" value="18-25"> 18-25</label>
-                <label><input type="radio" name="q4" value="26-35"> 26-35</label>
-                <label><input type="radio" name="q4" value="36-45"> 36-45</label>
-                <label><input type="radio" name="q4" value="46+"> 46+</label>
+            <div class="quiz-question">
+                <label for="age">What is your age range?</label>
+                <select name="age" id="age">
+                    <option value="18-30">18-30</option>
+                    <option value="31-50">31-50</option>
+                    <option value="50+">50+</option>
+                </select>
             </div>
 
-            <!-- Question 5 -->
-            <div class="question">
-                <label>Do you follow any specific diet plan?</label>
-                <label><input type="radio" name="q5" value="No"> No</label>
-                <label><input type="radio" name="q5" value="Yes"> Yes</label>
+            <div class="quiz-question">
+                <label for="experience">What is your fitness experience?</label>
+                <select name="experience" id="experience">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
             </div>
 
-            <!-- Question 6 -->
-            <div class="question">
-                <label>What is your current activity level outside of workouts?</label>
-                <label><input type="radio" name="q6" value="Sedentary"> Sedentary</label>
-                <label><input type="radio" name="q6" value="Lightly Active"> Lightly Active</label>
-                <label><input type="radio" name="q6" value="Moderately Active"> Moderately Active</label>
-                <label><input type="radio" name="q6" value="Very Active"> Very Active</label>
+            <div class="quiz-question">
+                <label for="medical-conditions">Any medical conditions or injuries?</label>
+                <select name="medical-conditions" id="medical-conditions">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
             </div>
 
-            <!-- Submit Button -->
-            <button type="button" class="submit-btn" onclick="evaluateQuiz()">Submit</button>
+            <div class="quiz-question">
+                <button type="submit" class="cta-btn">Submit</button>
+            </div>
         </form>
-
-        <!-- Recommendation -->
-        <div id="recommendation" style="display: none; margin-top: 20px;">
-            <h3>Your Recommended Package:</h3>
-            <p id="packageRecommendation"></p>
-        </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <div class="social-media-links">
@@ -304,38 +323,5 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Quiz Evaluation -->
-    <script>
-        function evaluateQuiz() {
-            const exerciseFrequency = document.querySelector('input[name="q1"]:checked');
-            const medicalCondition = document.querySelector('input[name="q3"]:checked');
-
-            let recommendedPackage = "";
-
-            // Check for medical conditions first
-            if (medicalCondition && medicalCondition.value === "Yes") {
-                recommendedPackage = "Beginner Package (Due to medical conditions)";
-            } else if (exerciseFrequency) {
-                switch (exerciseFrequency.value) {
-                    case "Never":
-                    case "Rarely":
-                        recommendedPackage = "Beginner Package";
-                        break;
-                    case "Occasionally":
-                        recommendedPackage = "Intermediate Package";
-                        break;
-                    case "Regularly":
-                        recommendedPackage = "Advanced Package";
-                        break;
-                    default:
-                        recommendedPackage = "Please select an option.";
-                }
-            }
-
-            // Display the recommendation
-            document.getElementById("packageRecommendation").textContent = recommendedPackage;
-            document.getElementById("recommendation").style.display = "block";
-        }
-    </script>
 </body>
 </html>
