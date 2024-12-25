@@ -268,6 +268,7 @@
         <h2>Answer these questions to get your personalized plan</h2>
 
         <form action="quiz.html" method="post" id="quizForm">
+            <!-- Question 1 -->
             <div class="quiz-question">
                 <label for="fitness-level">How often do you work out?</label>
                 <select name="fitness-level" id="fitness-level">
@@ -277,6 +278,7 @@
                 </select>
             </div>
 
+            <!-- Question 2 -->
             <div class="quiz-question">
                 <label for="medical-conditions">Do you have any medical conditions?</label>
                 <select name="medical-conditions" id="medical-conditions">
@@ -285,56 +287,96 @@
                 </select>
             </div>
 
+            <!-- Question 3 -->
             <div class="quiz-question">
                 <label for="goal">What is your primary fitness goal?</label>
                 <select name="goal" id="goal">
                     <option value="weight-loss">Weight Loss</option>
                     <option value="muscle-gain">Muscle Gain</option>
+                    <option value="toning">Toning</option>
                     <option value="general-fitness">General Fitness</option>
                 </select>
             </div>
 
+            <!-- Question 4 -->
             <div class="quiz-question">
-                <button type="submit" class="cta-btn">Submit</button>
+                <label for="age">What is your age range?</label>
+                <select name="age" id="age">
+                    <option value="18-25">18-25</option>
+                    <option value="26-35">26-35</option>
+                    <option value="36-45">36-45</option>
+                    <option value="46-60">46-60</option>
+                    <option value="60+">60+</option>
+                </select>
             </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-question">
+                <label for="activity-level">How would you describe your daily activity level?</label>
+                <select name="activity-level" id="activity-level">
+                    <option value="sedentary">Sedentary (little or no exercise)</option>
+                    <option value="light">Lightly active (light exercise or sports 1-3 days/week)</option>
+                    <option value="moderate">Moderately active (moderate exercise or sports 3-5 days/week)</option>
+                    <option value="very-active">Very active (hard exercise or sports 6-7 days/week)</option>
+                </select>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="quiz-question">
+                <label for="preferred-workout">What type of workout do you enjoy the most?</label>
+                <select name="preferred-workout" id="preferred-workout">
+                    <option value="cardio">Cardio</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="yoga">Yoga/Pilates</option>
+                    <option value="mixed">Mixed Routine</option>
+                </select>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="quiz-question">
+                <label for="diet">Are you following any special diet?</label>
+                <select name="diet" id="diet">
+                    <option value="none">None</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="low-carb">Low Carb</option>
+                    <option value="keto">Keto</option>
+                </select>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="quiz-question">
+                <label for="preferred-schedule">What is your preferred workout schedule?</label>
+                <select name="preferred-schedule" id="preferred-schedule">
+                    <option value="morning">Morning</option>
+                    <option value="afternoon">Afternoon</option>
+                    <option value="evening">Evening</option>
+                    <option value="any-time">Anytime</option>
+                </select>
+            </div>
+
+            <button type="submit" class="cta-btn">Submit</button>
         </form>
     </section>
 
-    <!-- Recommendation Section (Initially Hidden) -->
+    <!-- Recommendation Section -->
     <section class="recommendation-section" id="recommendationSection">
-        <h2>Recommended Plan</h2>
-        <p>Based on your answers, we recommend our <strong>Weight Loss Plan</strong> to help you achieve your fitness goals!</p>
-        <p>Ready to start? <a href="packages.html" class="cta-btn">View Our Packages</a></p>
+        <h2>Your Personalized Fitness Plan</h2>
+        <p>We recommend the following plan based on your answers!</p>
+        <button class="cta-btn" onclick="window.location.href='purchase.html'">Purchase Recommended Package</button>
     </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="footer-content">
-            <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Show the recommendation section when the quiz is submitted
-        const form = document.getElementById('quizForm');
-        const recommendationSection = document.getElementById('recommendationSection');
-
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
-            recommendationSection.style.display = 'block'; // Show the recommendation section
-        });
-    </script>
+   <!-- Footer with Social Media Links -->
+<footer>
+    <div class="social-media-links">
+        <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div class="footer-content">
+        <p>© 2024 AM Living Fit. All rights reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
