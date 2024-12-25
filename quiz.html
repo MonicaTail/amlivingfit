@@ -177,23 +177,28 @@
         }
 
         /* Footer Section */
-        <footer>
-        <div class="footer-content">
-            <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
-        </div>
-    </footer>
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
+        .social-media-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 1.5em;
+        }
+
+        .social-icon:hover {
+            color: #8e44ad;
+        }
     </style>
 </head>
 <body>
@@ -226,6 +231,7 @@
         <h2>Answer these questions to get your personalized plan</h2>
 
         <form action="quiz.html" method="post" id="quizForm">
+            <!-- 8 Questions -->
             <div class="quiz-question">
                 <label for="fitness-level">How often do you work out?</label>
                 <select name="fitness-level" id="fitness-level">
@@ -253,19 +259,48 @@
             </div>
 
             <div class="quiz-question">
-                <button type="submit" class="cta-btn">Submit</button>
+                <label for="age">How old are you?</label>
+                <input type="number" name="age" id="age" placeholder="Your age" required>
             </div>
+
+            <div class="quiz-question">
+                <label for="diet">Do you follow a specific diet?</label>
+                <select name="diet" id="diet">
+                    <option value="none">No</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="keto">Keto</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="sleep">How many hours do you sleep on average?</label>
+                <input type="number" name="sleep" id="sleep" placeholder="Hours of sleep" required>
+            </div>
+
+            <div class="quiz-question">
+                <label for="stress">How stressful is your daily life?</label>
+                <select name="stress" id="stress">
+                    <option value="low">Low</option>
+                    <option value="moderate">Moderate</option>
+                    <option value="high">High</option>
+                </select>
+            </div>
+
+            <div class="quiz-question">
+                <label for="preferences">Do you prefer working out at home or in the gym?</label>
+                <select name="preferences" id="preferences">
+                    <option value="home">Home</option>
+                    <option value="gym">Gym</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <p><button type="submit" class="cta-btn">Submit</button></p>
         </form>
     </section>
 
-    <!-- Recommendation Section (Initially Hidden) -->
-    <section class="recommendation-section" id="recommendationSection">
-        <h2>Recommended Plan</h2>
-        <p>Based on your answers, we recommend our <strong>Weight Loss Plan</strong> to help you achieve your fitness goals!</p>
-        <p>Ready to start? <button class="cta-btn">Purchase Now</button></p>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
         <div class="footer-content">
             <div class="social-media-links">
