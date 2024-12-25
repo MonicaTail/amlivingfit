@@ -68,44 +68,82 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Remove purple hover effect */
         .nav-item:hover {
-            background-color: #34495e; /* Slightly darker gray for hover */
+            background-color: #34495e;
             border-radius: 5px;
             border: 2px solid white;
         }
 
         .nav-item.active {
-            background-color: #34495e; /* Darker background for active nav items */
-            color: white;
+            background-color: #8e44ad;
+            color: #ffffff;
         }
 
-        /* Hero Section for Mission Statement */
-        .hero {
-            background: linear-gradient(135deg, #8e44ad, #27ae60);
+        /* Mission Section */
+        .mission-section {
+            background-color: #757171; /* Earthy purple */
             color: white;
-            padding: 100px 20px; /* Add more padding for larger header */
+            padding: 40px 0; /* Reduced padding */
             text-align: center;
         }
 
-        .hero-text h1 {
-            font-size: 3.5em; /* Make the text bigger */
+        .mission-section h1 {
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .hero-text p {
-            font-size: 1.5em; /* Slightly larger content text */
+        .mission-section p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+        }
+
+        /* Our Values Section */
+        .values-section {
+            background-color: white;
+            padding: 50px 0;
+        }
+
+        .values-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .value-card {
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+            height: 300px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             margin-bottom: 30px;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .value-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .value-card:hover {
+            transform: scale(1.05);
         }
 
         /* Call to Action Section */
         .cta-section {
             text-align: center;
-            padding: 50px 0;
+            padding: 20px 0;
+            background-color: #fff;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         }
 
         .cta-section h2 {
@@ -118,22 +156,24 @@
             margin-bottom: 30px;
         }
 
-        /* Make the button black with smooth edges */
+        /* Button Styles */
         .cta-btn {
             display: inline-block;
-            background-color: #000000;
+            background-color: #2c3e50; /* Same color as header */
             color: white;
-            padding: 15px 30px;
-            font-size: 1.2em;
+            padding: 10px 20px; /* Smaller padding */
+            font-size: 1.1em; /* Slightly smaller text */
             text-transform: uppercase;
             border: none;
-            border-radius: 30px; /* Increased radius for smoother, rounder edges */
-            transition: background-color 0.3s ease;
+            border-radius: 50px; /* Round buttons */
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .cta-btn:hover {
-            background-color: #333333; /* Slightly lighter black for hover effect */
+            background-color: #34495e;
+            transform: scale(1.05); /* Slightly grow the button */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
 
         /* Footer Styles */
@@ -180,7 +220,7 @@
                 font-size: 2em;
             }
 
-            .hero-text h1 {
+            .mission-section h1 {
                 font-size: 2.5em;
             }
         }
@@ -203,40 +243,47 @@
         </ul>
     </header>
 
-    <!-- Hero Section for Mission Statement -->
-    <section class="hero">
-        <div class="hero-text">
-            <h1>AM Living Mission</h1>
-            <p>
-                At AM Living Fit, my mission is to empower you to lead a healthier, happier life by providing a personalized fitness and wellness solution. I take a holistic approach to your health—focusing on strength, mobility, mental clarity, and emotional well-being. I'm dedicated to guiding you on your unique journey to optimal health, with a plan tailored to fit your goals, fitness level, and lifestyle. Together, we can achieve greatness, one step at a time.
-            </p>
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <h1>Our Mission</h1>
+        <p>At AM Living Fit, we are dedicated to empowering individuals to achieve their fitness and wellness goals through personalized programs that foster lasting health and happiness.</p>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="values-section">
+        <h2 style="text-align: center;">Our Core Values</h2>
+        <div class="values-container">
+            <div class="value-card">
+                <h3>Empathy</h3>
+                <p>We listen to our clients and provide support and guidance every step of the way.</p>
+            </div>
+            <div class="value-card">
+                <h3>Dedication</h3>
+                <p>We are committed to helping you reach your goals, no matter how big or small.</p>
+            </div>
+            <div class="value-card">
+                <h3>Results-Driven</h3>
+                <p>Our plans are built for real results, tailored to your unique needs and abilities.</p>
+            </div>
         </div>
     </section>
 
     <!-- Call to Action Section -->
     <section class="cta-section">
-        <h2>Ready to Embrace Your Health Journey?</h2>
-        <p>Join my community and take the first step towards a better you. Click below to get started with my free fitness quiz!</p>
-        <a href="quiz.html" class="cta-btn">
-            Take the Quiz
-        </a>
+        <h2>Ready to Start Your Journey?</h2>
+        <p>Join us today and begin your path to a healthier, stronger you. Click below to take our quiz and receive a customized fitness plan!</p>
+        <a href="quiz.html" class="cta-btn">Take the Quiz</a>
     </section>
 
     <!-- Footer Section -->
     <footer>
+        <div class="social-media-links">
+            <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
         <div class="footer-content">
-            <div class="social-media-links">
-                <a href="https://www.facebook.com" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="mailto:info@livingfit.com" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="tel:+123456789" class="social-icon">
-                    <i class="fas fa-phone-alt"></i>
-                </a>
-            </div>
-            <p>© 2024 AM Living Fit. All rights reserved.</p>
+            <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
 
