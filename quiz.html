@@ -178,7 +178,7 @@
 
         /* Footer Section */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
+            background-color: #2c3e50; /* Dark footer */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -234,7 +234,7 @@
     <section class="quiz-section">
         <h2>Answer these questions to get your personalized plan</h2>
 
-        <form action="quiz.html" method="post" id="quizForm">
+        <form action="packages.html" method="post" id="quizForm">
             <!-- 8 Questions -->
             <div class="quiz-question">
                 <label for="fitness-level">How often do you work out?</label>
@@ -272,39 +272,34 @@
                 <select name="diet" id="diet">
                     <option value="none">No</option>
                     <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
                     <option value="keto">Keto</option>
+                    <option value="other">Other</option>
                 </select>
             </div>
 
             <div class="quiz-question">
-                <label for="motivation">What motivates you the most?</label>
-                <select name="motivation" id="motivation">
-                    <option value="self">Personal Growth</option>
-                    <option value="social">Social Connection</option>
-                    <option value="competition">Competition</option>
+                <label for="preferred-time">How much time can you dedicate to exercise weekly?</label>
+                <input type="text" name="preferred-time" id="preferred-time" placeholder="e.g., 2 hours per week" required>
+            </div>
+
+            <div class="quiz-question">
+                <label for="experience">What is your fitness experience level?</label>
+                <select name="experience" id="experience">
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
                 </select>
             </div>
 
-            <div class="quiz-question">
-                <label for="time">How much time can you commit per week?</label>
-                <input type="number" name="time" id="time" placeholder="Time in hours" required>
-            </div>
-
-            <div class="quiz-question">
-                <label for="preferences">Any workout preferences?</label>
-                <input type="text" name="preferences" id="preferences" placeholder="Enter your preferences">
-            </div>
-
-            <button type="submit" class="cta-btn">Submit Your Answers</button>
+            <button type="button" class="cta-btn" id="submitButton">Submit Your Answers</button>
         </form>
-    </section>
 
-    <!-- Recommendation Section -->
-    <section class="recommendation-section">
-        <h2>Your Personalized Plan</h2>
-        <p>Based on your answers, we recommend our premium fitness package for you!</p>
-        <button class="cta-btn">Purchase Recommended Package</button>
+        <!-- Recommendation Section (Initially Hidden) -->
+        <div class="recommendation-section" id="recommendationSection">
+            <h2>Recommended Plan</h2>
+            <p id="recommendationMessage"></p>
+            <button class="cta-btn" onclick="window.location.href='packages.html'">See Packages</button>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -324,6 +319,35 @@
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- JavaScript for Form Handling and Redirection -->
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function(e) {
+            e.preventDefault();
+
+            // Collect values from the form
+            var fitnessLevel = document.getElementById('fitness-level').value;
+            var medicalConditions = document.getElementById('medical-conditions').value;
+
+            // Determine recommendation based on answers
+            var recommendation = '';
+
+            if (fitnessLevel === 'beginner' || medicalConditions === 'yes') {
+                recommendation = 'beginner';
+            } else if (fitnessLevel === 'intermediate') {
+                recommendation = 'intermediate';
+            } else if (fitnessLevel === 'advanced') {
+                recommendation = 'advanced';
+            }
+
+            // Display the recommendation section
+            document.getElementById('recommendationSection').style.display = 'block';
+            document.getElementById('recommendationMessage').innerText = 'We recommend the ' + recommendation.charAt(0).toUpperCase() + recommendation.slice(1) + ' Plan for you!';
+
+            // Redirect to packages page (optional if you want to keep the URL parameter)
+            window.location.href = "packages.html?recommendation=" + recommendation;
+        });
+    </script>
 
 </body>
 </html>
