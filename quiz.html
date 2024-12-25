@@ -178,9 +178,9 @@
 
         /* Footer Section */
         footer {
-            background-color: #2c3e50;
+            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
             color: white;
-            padding: 20px;
+            padding: 20px 0;
             text-align: center;
         }
 
@@ -198,6 +198,10 @@
 
         .social-icon:hover {
             color: #8e44ad;
+        }
+
+        .footer-content p {
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -274,30 +278,33 @@
             </div>
 
             <div class="quiz-question">
-                <label for="sleep">How many hours do you sleep on average?</label>
-                <input type="number" name="sleep" id="sleep" placeholder="Hours of sleep" required>
-            </div>
-
-            <div class="quiz-question">
-                <label for="stress">How stressful is your daily life?</label>
-                <select name="stress" id="stress">
-                    <option value="low">Low</option>
-                    <option value="moderate">Moderate</option>
-                    <option value="high">High</option>
+                <label for="motivation">What motivates you the most?</label>
+                <select name="motivation" id="motivation">
+                    <option value="self">Personal Growth</option>
+                    <option value="social">Social Connection</option>
+                    <option value="competition">Competition</option>
                 </select>
             </div>
 
             <div class="quiz-question">
-                <label for="preferences">Do you prefer working out at home or in the gym?</label>
-                <select name="preferences" id="preferences">
-                    <option value="home">Home</option>
-                    <option value="gym">Gym</option>
-                </select>
+                <label for="time">How much time can you commit per week?</label>
+                <input type="number" name="time" id="time" placeholder="Time in hours" required>
             </div>
 
-            <!-- Submit Button -->
-            <p><button type="submit" class="cta-btn">Submit</button></p>
+            <div class="quiz-question">
+                <label for="preferences">Any workout preferences?</label>
+                <input type="text" name="preferences" id="preferences" placeholder="Enter your preferences">
+            </div>
+
+            <button type="submit" class="cta-btn">Submit Your Answers</button>
         </form>
+    </section>
+
+    <!-- Recommendation Section -->
+    <section class="recommendation-section">
+        <h2>Your Personalized Plan</h2>
+        <p>Based on your answers, we recommend our premium fitness package for you!</p>
+        <button class="cta-btn">Purchase Recommended Package</button>
     </section>
 
     <!-- Footer Section -->
