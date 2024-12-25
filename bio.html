@@ -100,9 +100,10 @@
         /* Bio Section (with Amanda's picture) */
         .bio-info {
             background-color: #f7f9f8;
-            padding: 40px;
+            padding: 20px 40px; /* Adjusted padding to move content higher */
             color: #333;
             text-align: center;
+            margin-top: -30px; /* Moved the section up closer to the hero */
         }
 
         .bio-info h2 {
@@ -123,8 +124,9 @@
 
         .bio-image img {
             max-width: 300px; /* Resize Amanda's image */
-            height: auto;
+            height: 300px; /* Fixed height to make it perfectly round */
             border-radius: 50%; /* Make the image circular */
+            object-fit: cover; /* Ensures the image covers the circle without distortion */
         }
 
         /* Footer Styles */
