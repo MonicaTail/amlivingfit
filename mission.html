@@ -76,7 +76,7 @@
 
         /* Hero Section */
         .hero {
-            background-color:#757171;/* Earthy purple */
+            background-color: #757171; /* Earthy purple */
             color: white;
             padding: 40px 0; /* Reduced padding to make it smaller */
             text-align: center;
@@ -96,7 +96,7 @@
         .mission-cards {
             display: flex;
             justify-content: space-around;
-            margin: 40px 0;
+            margin: 20px 0; /* Reduced margin to move the cards up */
             padding: 20px;
         }
 
@@ -107,6 +107,11 @@
             padding: 20px;
             width: 30%;
             text-align: center;
+            transition: transform 0.3s ease; /* Add a smooth transition */
+        }
+
+        .mission-card:hover {
+            transform: scale(1.05); /* Slight scaling effect on hover */
         }
 
         .mission-card h3 {
@@ -192,7 +197,7 @@
         </div>
     </section>
 
-    <!-- Mission Cards Section (Moved Up) -->
+    <!-- Mission Cards Section (Moved Up & Bounce Effect Added) -->
     <section class="mission-cards">
         <div class="mission-card">
             <h3>Personalized Plans</h3>
