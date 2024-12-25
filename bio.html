@@ -97,12 +97,20 @@
             margin-bottom: 30px;
         }
 
+        /* Line separator between title and description in Hero Section */
+        .hero-text hr {
+            border: 0;
+            border-top: 2px solid #ffffff; /* White line */
+            width: 80%;
+            margin: 20px auto;
+        }
+
         /* Bio Section (with Amanda's picture) */
         .bio-info {
             background-color: #f7f9f8;
             padding: 20px 40px; /* Adjusted padding to move content higher */
             color: #333;
-            text-align: center;
+            text-align: justify; /* Justify the text */
             margin-top: -30px; /* Moved the section up closer to the hero */
         }
 
@@ -118,15 +126,22 @@
             margin: 0 auto;
         }
 
+        /* Line separator */
+        hr {
+            border: 0;
+            border-top: 1px solid #ddd;
+            margin: 40px 0; /* Add spacing around the line */
+        }
+
         .bio-image {
             margin-top: 20px;
         }
 
         .bio-image img {
-            max-width: 300px; /* Resize Amanda's image */
-            height: 300px; /* Fixed height to make it perfectly round */
+            width: 300px; /* Ensure image is the right size */
+            height: 300px; /* Fix height to make it perfectly round */
             border-radius: 50%; /* Make the image circular */
-            object-fit: cover; /* Ensures the image covers the circle without distortion */
+            object-fit: cover; /* Ensures the image fills the circle without distortion */
         }
 
         /* Footer Styles */
@@ -201,6 +216,8 @@
         <div class="hero-text">
             <h1>Meet Amanda</h1>
             <p>Health Coach / Motivator / Instructor</p>
+            <!-- Line separator between description and title -->
+            <hr>
         </div>
     </section>
 
@@ -212,6 +229,9 @@
         <p>
             Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
         </p>
+
+        <!-- Line separator -->
+        <hr>
 
         <!-- Amanda's Image -->
         <div class="bio-image">
