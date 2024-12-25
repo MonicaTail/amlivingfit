@@ -81,7 +81,7 @@
 
         /* Hero Section */
         .hero {
-            background-color:#757171;/* Earthy purple */
+            background-color:#757171; /* Earthy purple */
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -109,7 +109,9 @@
 
         .form-container h2 {
             text-align: center;
+            margin-top: -40px; /* Adjusted to move the heading up */
             margin-bottom: 20px;
+            color: #ffffff;
         }
 
         .form-container .question {
@@ -136,6 +138,7 @@
             border-radius: 50px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 20px;
         }
 
         .form-container button.submit-btn:hover {
@@ -246,18 +249,44 @@
                 <label><input type="radio" name="q3" value="Yes"> Yes</label>
             </div>
 
+            <!-- Question 4 -->
+            <div class="question">
+                <label>What is your age range?</label>
+                <label><input type="radio" name="q4" value="Under 18"> Under 18</label>
+                <label><input type="radio" name="q4" value="18-25"> 18-25</label>
+                <label><input type="radio" name="q4" value="26-35"> 26-35</label>
+                <label><input type="radio" name="q4" value="36-45"> 36-45</label>
+                <label><input type="radio" name="q4" value="46+"> 46+</label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <label>Do you follow any specific diet plan?</label>
+                <label><input type="radio" name="q5" value="No"> No</label>
+                <label><input type="radio" name="q5" value="Yes"> Yes</label>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question">
+                <label>What is your current activity level outside of workouts?</label>
+                <label><input type="radio" name="q6" value="Sedentary"> Sedentary</label>
+                <label><input type="radio" name="q6" value="Lightly Active"> Lightly Active</label>
+                <label><input type="radio" name="q6" value="Moderately Active"> Moderately Active</label>
+                <label><input type="radio" name="q6" value="Very Active"> Very Active</label>
+            </div>
+
             <!-- Submit Button -->
             <button type="button" class="submit-btn" onclick="evaluateQuiz()">Submit</button>
         </form>
 
-        <!-- Package Recommendation Section -->
-        <div id="recommendation" style="display:none; padding: 20px; background-color: #f1f1f1; border-radius: 5px;">
+        <!-- Recommendation -->
+        <div id="recommendation" style="display: none; margin-top: 20px;">
             <h3>Your Recommended Package:</h3>
             <p id="packageRecommendation"></p>
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="social-media-links">
