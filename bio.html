@@ -75,9 +75,15 @@
         /* Bio Section */
         .bio-background {
             background-color: #757171; /* Earthy purple */
-            padding: 30px 20px;  /* Reduced padding to move image higher */
+            padding: 30px 20px;
             text-align: center;
             position: relative;
+        }
+
+        .bio-background .heading {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 20px;
         }
 
         .bio-background img {
@@ -87,7 +93,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             object-fit: cover;
             border: 5px solid white;
-            margin-top: -50px; /* Move image up with negative margin */
+            margin-top: 20px; /* Move image below heading */
         }
 
         .bio-container {
@@ -104,7 +110,7 @@
             font-size: 1.2em;
             line-height: 1.8;
             margin: 10px 0;
-            text-align: center; /* Justified text */
+            text-align: center;
         }
 
         /* Footer Styles */
@@ -172,8 +178,9 @@
         </ul>
     </header>
 
-    <!-- Bio Section with Image moved up -->
+    <!-- Bio Section with Image Below Text -->
     <section class="bio-background">
+        <div class="heading">Your guide to a healthier mind and body</div>
         <img src="amandapic.jpg" alt="Amanda - Bio">
     </section>
 
