@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Meet Amanda</title>
+    <title>Amanda - Bio - AM Living Fit</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -79,54 +79,49 @@
             color: #ffffff;
         }
 
-        /* Hero Section */
+        /* Hero Section - Darker Muted Purple-Brown */
         .hero {
             background-color: #757171; /* Earthy purple */
             color: white;
-            padding: 40px 0; /* Reduced padding to match */
+            padding: 0; /* No extra padding, so no extra white space */
             text-align: center;
             position: relative;
+            height: 400px; /* Fixed height for consistency */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .hero-text h1 {
-            font-size: 2.5em; /* Slightly smaller font size */
-            margin-bottom: 20px;
+        /* Amanda Image inside Hero */
+        .hero img {
+            width: 200px; /* Adjust size of the image */
+            height: 200px;
+            border-radius: 50%; /* Circle shape */
+            border: 5px solid white; /* White border around the image */
+            object-fit: cover; /* Ensures the image fits the circle shape without distortion */
         }
 
-        .hero-text p {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-        }
-
-        .amanda-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-top: 20px; /* Adding space between text and image */
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Bio Section */
+        /* White Space Section for Amanda Text */
         .bio-section {
-            background-color: #ffffff;
-            padding: 50px 20px;
+            background-color: #ffffff; /* White background */
+            padding: 40px 20px; /* Some space for text */
             text-align: center;
         }
 
         .bio-section h2 {
             font-size: 2.5em;
-            color: #333;
             margin-bottom: 20px;
+            color: #2c3e50;
         }
 
         .bio-section p {
             font-size: 1.2em;
-            color: #666;
             line-height: 1.6;
+            margin-bottom: 40px;
+            color: #333;
             max-width: 800px;
-            margin: 0 auto;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Footer Styles */
@@ -173,8 +168,13 @@
                 font-size: 2em;
             }
 
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 2.5em;
+            }
+
+            .hero img {
+                width: 120px; /* Slightly smaller on mobile */
+                height: 120px;
             }
         }
     </style>
@@ -196,21 +196,16 @@
         </ul>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Only Amanda's Image -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>Meet Amanda</h1>
-            <p>Founder of AM Living Fit</p>
-        </div>
-        <img class="amanda-img" src="amanda-pic.jpg" alt="Amanda's picture">
+        <img src="amandapic.jpg" alt="Amanda's Picture"> <!-- The Image of Amanda with a white border -->
     </section>
 
-    <!-- Bio Section -->
+    <!-- White Space Section for Amanda Text -->
     <section class="bio-section">
-        <h2>Amanda's Journey</h2>
-        <p>
-            Amanda is a passionate fitness coach with years of experience in helping people achieve their health goals. She started AM Living Fit with the vision to create a community where everyone, regardless of their fitness level, can feel motivated and supported. Amanda specializes in creating customized fitness plans that work for each individual, no matter their starting point. Her goal is to inspire you to lead a healthier and happier lifestyle.
-        </p>
+        <h2>Amanda's Bio</h2>
+        <p>Amanda is a passionate and experienced fitness instructor who has dedicated her life to helping others achieve their health and wellness goals. With years of experience in strength training, yoga, and holistic fitness, Amanda brings a personalized and balanced approach to every client.</p>
+        <p>Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.</p>
     </section>
 
     <!-- Footer Section -->
