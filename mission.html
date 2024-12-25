@@ -79,101 +79,62 @@
             color: #ffffff;
         }
 
-        /* Mission Section */
-        .mission-section {
+        /* Hero Section */
+        .hero {
             background-color: #757171; /* Earthy purple */
             color: white;
-            padding: 40px 0; /* Reduced padding */
+            padding: 40px 0;
             text-align: center;
         }
 
-        .mission-section h1 {
+        .hero-text h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .mission-section p {
+        .hero-text p {
             font-size: 1.3em;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        /* Our Values Section */
-        .values-section {
-            background-color: white;
-            padding: 50px 0;
-        }
-
-        .values-container {
+        /* Core Values Section */
+        .core-values-container {
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 30px;
+            padding: 50px 20px;
             flex-wrap: wrap;
         }
 
-        .value-card {
-            background-color: #f1f1f1;
+        .core-value-card {
+            background-color: white;
             border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 300px;
             padding: 20px;
             text-align: center;
-            width: 250px;
-            height: 300px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .value-card h3 {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-
-        .value-card p {
-            font-size: 1.1em;
-            color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 250px;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #ddd;
+        }
+
+        .core-value-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .core-value-card p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
             flex-grow: 1;
         }
 
-        .value-card:hover {
+        .core-value-card:hover {
             transform: scale(1.05);
-        }
-
-        /* Call to Action Section */
-        .cta-section {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-
-        .cta-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        /* Button Styles */
-        .cta-btn {
-            display: inline-block;
-            background-color: #2c3e50; /* Same color as header */
-            color: white;
-            padding: 10px 20px; /* Smaller padding */
-            font-size: 1.1em; /* Slightly smaller text */
-            text-transform: uppercase;
-            border: none;
-            border-radius: 50px; /* Round buttons */
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            background-color: #34495e;
-            transform: scale(1.05); /* Slightly grow the button */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
 
         /* Footer Styles */
@@ -220,7 +181,7 @@
                 font-size: 2em;
             }
 
-            .mission-section h1 {
+            .hero-text h1 {
                 font-size: 2.5em;
             }
         }
@@ -243,47 +204,45 @@
         </ul>
     </header>
 
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <h1>Our Mission</h1>
-        <p>At AM Living Fit, we are dedicated to empowering individuals to achieve their fitness and wellness goals through personalized programs that foster lasting health and happiness.</p>
-    </section>
-
-    <!-- Our Values Section -->
-    <section class="values-section">
-        <h2 style="text-align: center;">Our Core Values</h2>
-        <div class="values-container">
-            <div class="value-card">
-                <h3>Empathy</h3>
-                <p>We listen to our clients and provide support and guidance every step of the way.</p>
-            </div>
-            <div class="value-card">
-                <h3>Dedication</h3>
-                <p>We are committed to helping you reach your goals, no matter how big or small.</p>
-            </div>
-            <div class="value-card">
-                <h3>Results-Driven</h3>
-                <p>Our plans are built for real results, tailored to your unique needs and abilities.</p>
-            </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Our Mission</h1>
+            <p>We are here to empower you to achieve a healthier lifestyle. Our mission is simple: to guide you every step of the way, offering tailored support and personalized plans that work for you.</p>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-        <h2>Ready to Start Your Journey?</h2>
-        <p>Join us today and begin your path to a healthier, stronger you. Click below to take our quiz and receive a customized fitness plan!</p>
-        <a href="quiz.html" class="cta-btn">Take the Quiz</a>
+    <!-- Core Values Section -->
+    <section class="core-values-container">
+        <div class="core-value-card">
+            <h3>Empathy</h3>
+            <p>We listen to our clients and provide support and guidance every step of the way. Understanding your unique needs allows us to create a personalized plan that works for you.</p>
+        </div>
+        <div class="core-value-card">
+            <h3>Dedication</h3>
+            <p>We are committed to helping you reach your goals, no matter how big or small. Our team is dedicated to your progress and will be with you for every milestone.</p>
+        </div>
+        <div class="core-value-card">
+            <h3>Results-Driven</h3>
+            <p>Our plans are built for real results, tailored to your unique fitness journey. We focus on actionable steps that deliver measurable improvements, helping you see results faster.</p>
+        </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <div class="social-media-links">
-            <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-        </div>
         <div class="footer-content">
-            <p>&copy; 2024 AM Living Fit. All rights reserved.</p>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
 
