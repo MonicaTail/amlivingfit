@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Amanda - Instructor Bio</title>
+    <title>AM Living Fit - Bio</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
-
+    
     <!-- Link to Font Awesome for social media icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
@@ -79,52 +79,91 @@
             color: #ffffff;
         }
 
-        /* Hero Section - Darker Muted Purple-Brown */
+        /* Updated Hero Section */
         .hero {
-            background-color: #757171; /* Earthy purple */
+            background-image: url('your-image-path.jpg'); /* Add your hero image here */
+            background-size: cover;
+            background-position: top center; /* Adjust image position */
             color: white;
-            padding: 40px 0;
+            padding: 50px 0; /* Same size as the registration page */
             text-align: center;
+            height: 60vh; /* Adjust the height of the hero section */
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
-            margin-bottom: 40px;
         }
 
         .hero-text h1 {
             font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .hero-text p {
             font-size: 1.3em;
             margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
         }
 
-        .hero-image {
-            width: 230px;
-            height: 230px;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            object-fit: cover;
-            border: 5px solid white;
-            margin-top: 20px;
-        }
-
-        /* Bio Section Content */
-        .bio-container {
-            margin: 30px auto;
-            padding: 30px 20px;
-            background-color: #ffffff;
-            color: #333;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-        }
-
-        .bio-text {
-            font-size: 1.2em;
-            line-height: 1.8;
-            margin: 10px 0;
+        /* Registration Form Section */
+        .cta-section {
             text-align: center;
+            padding: 50px 0;
+            background-color: white; /* White background for the registration form */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: -50px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 3em; /* Larger heading */
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.5em; /* Larger paragraph text */
+            margin-bottom: 30px;
+        }
+
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .registration-form input {
+            padding: 12px;
+            font-size: 16px;
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Style for Buttons */
+        .cta-btn {
+            display: inline-block;
+            background-color: #2c3e50; /* Same color as header */
+            color: white;
+            padding: 10px 20px; /* Smaller padding */
+            font-size: 1.1em; /* Slightly smaller text */
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px; /* Round buttons */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #34495e; /* Lighter shade for hover effect */
+            transform: scale(1.05); /* Slightly grow the button */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
 
         /* Footer Styles */
@@ -167,16 +206,12 @@
                 padding: 10px 20px;
             }
 
-            .hero-text h1 {
+            .cta-section h2 {
                 font-size: 2.5em;
             }
 
-            .hero-image {
-                width: 150px;
-            }
-
-            .bio-container {
-                padding: 20px 10px;
+            .hero-text h1 {
+                font-size: 2.5em;
             }
         }
     </style>
@@ -190,7 +225,7 @@
         </div>
         <ul class="nav-links">
             <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="bio.html" class="nav-item">Bio</a></li>
+            <li><a href="bio.html" class="nav-item active">Bio</a></li>
             <li><a href="packages.html" class="nav-item">Our Packages</a></li>
             <li><a href="mission.html" class="nav-item">Our Mission</a></li>
             <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
@@ -201,21 +236,15 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Your guide to a healthier mind and body</h1>
-            <p>Start your fitness journey with personalized guidance and support.</p>
+            <h1>Meet Our Instructor</h1>
+            <p>Learn more about the journey and experience</p>
         </div>
-        <img src="amandapic.jpg" alt="Amanda - Instructor" class="hero-image">
     </section>
 
-    <!-- Bio Section Content -->
-    <div class="bio-container">
-        <p class="bio-text">
-            Amanda is a passionate and experienced fitness instructor who has dedicated her life to helping others achieve their health and wellness goals. With years of experience in strength training, yoga, and holistic fitness, Amanda brings a personalized and balanced approach to every client.
-        </p>
-        <p class="bio-text">
-            Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
-        </p>
-    </div>
+    <!-- Registration Form Section -->
+    <section class="cta-section">
+        <!-- Add content here -->
+    </section>
 
     <!-- Footer Section -->
     <footer>
