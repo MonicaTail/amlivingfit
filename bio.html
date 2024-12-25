@@ -19,8 +19,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            color: #333;
             background-color: #f7f9f8;
+            color: #333;
         }
 
         a {
@@ -42,8 +42,15 @@
             text-align: center;
         }
 
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
         .logo-container img {
-            width: 150px;
+            width: 150px; /* Resize the logo */
             height: auto;
         }
 
@@ -72,30 +79,37 @@
             color: #ffffff;
         }
 
-        /* Bio Section */
-        .bio-background {
+        /* Hero Section - Darker Muted Purple-Brown */
+        .hero {
             background-color: #757171; /* Earthy purple */
-            padding: 30px 20px;
+            color: white;
+            padding: 40px 0;
             text-align: center;
             position: relative;
+            margin-bottom: 40px;
         }
 
-        .bio-background .heading {
-            color: white;
-            font-size: 2em;
+        .hero-text h1 {
+            font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
         }
 
-        .bio-background img {
+        .hero-text p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
             width: 230px;
             height: 230px;
             border-radius: 50%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             object-fit: cover;
             border: 5px solid white;
-            margin-top: 20px; /* Move image below heading */
+            margin-top: 20px;
         }
 
+        /* Bio Section Content */
         .bio-container {
             margin: 30px auto;
             padding: 30px 20px;
@@ -115,7 +129,7 @@
 
         /* Footer Styles */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #000000);
+            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -148,21 +162,27 @@
                 gap: 10px;
             }
 
-            .bio-container {
-                padding: 30px 10px;
+            .cta-btn {
+                font-size: 16px;
+                padding: 10px 20px;
             }
 
-            .bio-text {
-                font-size: 1em;
+            .hero-text h1 {
+                font-size: 2.5em;
             }
 
-            .bio-background img {
+            .hero-image {
                 width: 150px;
+            }
+
+            .bio-container {
+                padding: 20px 10px;
             }
         }
     </style>
 </head>
 <body>
+
     <!-- Header with Navigation -->
     <header>
         <div class="logo-container">
@@ -178,13 +198,16 @@
         </ul>
     </header>
 
-    <!-- Bio Section with Image Below Text -->
-    <section class="bio-background">
-        <div class="heading">Your guide to a healthier mind and body</div>
-        <img src="amandapic.jpg" alt="Amanda - Bio">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Your guide to a healthier mind and body</h1>
+            <p>Start your fitness journey with personalized guidance and support.</p>
+        </div>
+        <img src="amandapic.jpg" alt="Amanda - Instructor" class="hero-image">
     </section>
 
-    <!-- Bio Content Section -->
+    <!-- Bio Section Content -->
     <div class="bio-container">
         <p class="bio-text">
             Amanda is a passionate and experienced fitness instructor who has dedicated her life to helping others achieve their health and wellness goals. With years of experience in strength training, yoga, and holistic fitness, Amanda brings a personalized and balanced approach to every client.
@@ -211,5 +234,6 @@
             <p>© 2024 AM Living Fit. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
