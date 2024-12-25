@@ -81,10 +81,11 @@
 
         /* Hero Section - Match with index page size */
         .hero {
-            background-color:#757171; /* Earthy purple */
+            background-color: #757171; /* Earthy purple */
             color: white;
             padding: 40px 0; /* Same size as index hero */
             text-align: center;
+            position: relative;
         }
 
         .hero-text h1 {
@@ -95,6 +96,18 @@
         .hero-text p {
             font-size: 1.3em;
             margin-bottom: 30px;
+        }
+
+        /* Amanda Picture Styling */
+        .amanda-pic {
+            position: absolute;
+            bottom: 20px; /* Adjust this to move it up/down */
+            left: 50%;
+            transform: translateX(-50%); /* Center the image horizontally */
+            width: 150px; /* Resize the image to fit */
+            height: auto;
+            border-radius: 50%; /* Circle the image */
+            border: 5px solid white; /* Add a white border around the picture */
         }
 
         /* Call to Action Section */
@@ -182,6 +195,10 @@
             .hero-text h1 {
                 font-size: 2.5em;
             }
+
+            .amanda-pic {
+                width: 120px; /* Adjust for smaller screens */
+            }
         }
     </style>
 </head>
@@ -208,6 +225,9 @@
             <h1>Welcome to AM Living Fit</h1>
             <p>Your journey to better health and fitness starts right here</p>
         </div>
+
+        <!-- Amanda's Picture in the Hero Section -->
+        <img src="amanda-photo.jpg" alt="Amanda" class="amanda-pic"> <!-- Replace with actual path to the image -->
     </section>
 
     <!-- Call to Action Section -->
