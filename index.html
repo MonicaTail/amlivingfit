@@ -79,19 +79,16 @@
             color: #ffffff;
         }
 
-/* Hero Section */
-.hero {
-    background-color: #9e7a74;  /* Lighter brownish purple */
-    color: white;
-    padding: 80px 0;
-    text-align: center;
-}
-
-
-
+        /* Hero Section */
+        .hero {
+            background-color: #9e7a74;  /* Lighter brownish purple */
+            color: white;
+            padding: 40px 0; /* Reduced the padding to make it smaller */
+            text-align: center;
+        }
 
         .hero-text h1 {
-            font-size: 3em;
+            font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
         }
 
@@ -126,12 +123,14 @@
             text-transform: uppercase;
             border: none;
             border-radius: 50px; /* Round buttons */
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             cursor: pointer;
         }
 
         .cta-btn:hover {
             background-color: #34495e; /* Lighter shade for hover effect */
+            transform: scale(1.05); /* Slightly grow the button */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
 
         /* Footer Styles */
@@ -206,9 +205,6 @@
         <div class="hero-text">
             <h1>Welcome to AM Living Fit</h1>
             <p>Your journey to better health and fitness starts right here</p>
-            <a href="packages.html" class="cta-btn">
-                Start Your Journey
-            </a>
         </div>
     </section>
 
