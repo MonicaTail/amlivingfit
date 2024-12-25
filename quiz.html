@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Take the Quiz</title>
+    <title>AM Living Fit - Your Path to a Healthier Lifestyle</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
         }
 
         .logo-container img {
-            width: 150px;
+            width: 150px; /* Resize the logo */
             height: auto;
         }
 
@@ -79,9 +79,9 @@
             color: #ffffff;
         }
 
-        /* Hero Section - Darker Muted Purple-Brown */
+        /* Hero Section */
         .hero {
-            background-color:#757171; /* Earthy purple */
+            background-color:#757171;/* Earthy purple */
             color: white;
             padding: 40px 0;
             text-align: center;
@@ -97,7 +97,7 @@
             margin-bottom: 30px;
         }
 
-        /* Form Section */
+        /* Quiz Form Section */
         .form-container {
             padding: 30px 20px;
             background-color: white;
@@ -144,7 +144,7 @@
 
         /* Footer Styles */
         footer {
-            background: linear-gradient(135deg, #2c3e50, #000000);
+            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -168,6 +168,27 @@
 
         .footer-content p {
             margin: 10px 0;
+        }
+
+        /* Mobile-Friendly Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cta-btn {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 2em;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
         }
     </style>
 </head>
@@ -199,44 +220,41 @@
     <!-- Quiz Form Section -->
     <section class="form-container">
         <h2>Take Our Quiz</h2>
-        <form action="results.html">
+        <form id="quizForm">
             <!-- Question 1 -->
             <div class="question">
                 <label>How often do you exercise?</label>
-                <label><input type="radio" name="q1" value="1"> Never</label>
-                <label><input type="radio" name="q1" value="2"> Rarely</label>
-                <label><input type="radio" name="q1" value="3"> Occasionally</label>
-                <label><input type="radio" name="q1" value="4"> Regularly</label>
+                <label><input type="radio" name="q1" value="Never"> Never</label>
+                <label><input type="radio" name="q1" value="Rarely"> Rarely</label>
+                <label><input type="radio" name="q1" value="Occasionally"> Occasionally</label>
+                <label><input type="radio" name="q1" value="Regularly"> Regularly</label>
             </div>
 
             <!-- Question 2 -->
             <div class="question">
                 <label>What is your fitness goal?</label>
-                <label><input type="radio" name="q2" value="1"> Lose Weight</label>
-                <label><input type="radio" name="q2" value="2"> Build Muscle</label>
-                <label><input type="radio" name="q2" value="3"> Improve Endurance</label>
-                <label><input type="radio" name="q2" value="4"> General Health</label>
+                <label><input type="radio" name="q2" value="Lose Weight"> Lose Weight</label>
+                <label><input type="radio" name="q2" value="Build Muscle"> Build Muscle</label>
+                <label><input type="radio" name="q2" value="Improve Endurance"> Improve Endurance</label>
+                <label><input type="radio" name="q2" value="General Health"> General Health</label>
             </div>
 
             <!-- Question 3 -->
             <div class="question">
                 <label>Do you have any medical conditions?</label>
-                <label><input type="radio" name="q3" value="1"> No</label>
-                <label><input type="radio" name="q3" value="2"> Yes</label>
-            </div>
-
-            <!-- Question 4 -->
-            <div class="question">
-                <label>How much time can you dedicate to working out each week?</label>
-                <label><input type="radio" name="q4" value="1"> Less than 2 hours</label>
-                <label><input type="radio" name="q4" value="2"> 2-4 hours</label>
-                <label><input type="radio" name="q4" value="3"> 4-6 hours</label>
-                <label><input type="radio" name="q4" value="4"> More than 6 hours</label>
+                <label><input type="radio" name="q3" value="No"> No</label>
+                <label><input type="radio" name="q3" value="Yes"> Yes</label>
             </div>
 
             <!-- Submit Button -->
-            <button type="submit" class="submit-btn">Get Your Recommendation</button>
+            <button type="button" class="submit-btn" onclick="evaluateQuiz()">Submit</button>
         </form>
+
+        <!-- Package Recommendation Section -->
+        <div id="recommendation" style="display:none; padding: 20px; background-color: #f1f1f1; border-radius: 5px;">
+            <h3>Your Recommended Package:</h3>
+            <p id="packageRecommendation"></p>
+        </div>
     </section>
 
     <!-- Footer Section -->
@@ -257,5 +275,38 @@
         </div>
     </footer>
 
+    <!-- JavaScript for Quiz Evaluation -->
+    <script>
+        function evaluateQuiz() {
+            const exerciseFrequency = document.querySelector('input[name="q1"]:checked');
+            const medicalCondition = document.querySelector('input[name="q3"]:checked');
+
+            let recommendedPackage = "";
+
+            // Check for medical conditions first
+            if (medicalCondition && medicalCondition.value === "Yes") {
+                recommendedPackage = "Beginner Package (Due to medical conditions)";
+            } else if (exerciseFrequency) {
+                switch (exerciseFrequency.value) {
+                    case "Never":
+                    case "Rarely":
+                        recommendedPackage = "Beginner Package";
+                        break;
+                    case "Occasionally":
+                        recommendedPackage = "Intermediate Package";
+                        break;
+                    case "Regularly":
+                        recommendedPackage = "Advanced Package";
+                        break;
+                    default:
+                        recommendedPackage = "Please select an option.";
+                }
+            }
+
+            // Display the recommendation
+            document.getElementById("packageRecommendation").textContent = recommendedPackage;
+            document.getElementById("recommendation").style.display = "block";
+        }
+    </script>
 </body>
 </html>
