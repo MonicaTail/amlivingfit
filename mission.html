@@ -74,21 +74,16 @@
             border: 2px solid white;
         }
 
-        .nav-item.active {
-            background-color: #8e44ad;
-            color: #ffffff;
-        }
-
         /* Hero Section */
         .hero {
-            background-color: #757171; /* Earthy purple */
+            background-color:#757171;/* Earthy purple */
             color: white;
-            padding: 40px 0;
+            padding: 40px 0; /* Reduced padding to make it smaller */
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 2.5em;
+            font-size: 2.5em; /* Slightly smaller font size */
             margin-bottom: 20px;
         }
 
@@ -97,44 +92,32 @@
             margin-bottom: 30px;
         }
 
-        /* Core Values Section */
-        .core-values-container {
+        /* Mission Cards Section */
+        .mission-cards {
             display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px 20px;
-            flex-wrap: wrap;
-        }
-
-        .core-value-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            justify-content: space-around;
+            margin: 40px 0;
             padding: 20px;
+        }
+
+        .mission-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 250px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            border: 1px solid #ddd;
         }
 
-        .core-value-card h3 {
-            font-size: 1.6em;
-            margin-bottom: 15px;
+        .mission-card h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+            color: #2c3e50;
         }
 
-        .core-value-card p {
+        .mission-card p {
             font-size: 1.1em;
-            margin-bottom: 15px;
-            flex-grow: 1;
-        }
-
-        .core-value-card:hover {
-            transform: scale(1.05);
+            color: #333;
         }
 
         /* Footer Styles */
@@ -172,17 +155,14 @@
                 gap: 10px;
             }
 
-            .cta-btn {
-                font-size: 16px;
-                padding: 10px 20px;
+            .mission-cards {
+                flex-direction: column;
+                align-items: center;
             }
 
-            .cta-section h2 {
-                font-size: 2em;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
+            .mission-card {
+                width: 80%;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -198,7 +178,7 @@
             <li><a href="index.html" class="nav-item">Home</a></li>
             <li><a href="bio.html" class="nav-item">Bio</a></li>
             <li><a href="packages.html" class="nav-item">Our Packages</a></li>
-            <li><a href="mission.html" class="nav-item active">Our Mission</a></li>
+            <li><a href="mission.html" class="nav-item">Our Mission</a></li>
             <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
             <li><a href="register.html" class="nav-item">Register</a></li>
         </ul>
@@ -207,24 +187,24 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>Our Mission</h1>
-            <p>We are here to empower you to achieve a healthier lifestyle. Our mission is simple: to guide you every step of the way, offering tailored support and personalized plans that work for you.</p>
+            <h1>Our Mission at AM Living Fit</h1>
+            <p>We're here to help you live a healthier, happier life with personalized fitness plans and ongoing support.</p>
         </div>
     </section>
 
-    <!-- Core Values Section - Moved up -->
-    <section class="core-values-container">
-        <div class="core-value-card">
-            <h3>Empathy</h3>
-            <p>We listen to our clients and provide support and guidance every step of the way. Understanding your unique needs allows us to create a personalized plan that works for you.</p>
+    <!-- Mission Cards Section (Moved Up) -->
+    <section class="mission-cards">
+        <div class="mission-card">
+            <h3>Personalized Plans</h3>
+            <p>We design fitness plans based on your unique needs, goals, and lifestyle, ensuring sustainable results.</p>
         </div>
-        <div class="core-value-card">
-            <h3>Dedication</h3>
-            <p>We are committed to helping you reach your goals, no matter how big or small. Our team is dedicated to your progress and will be with you for every milestone.</p>
+        <div class="mission-card">
+            <h3>Support Every Step</h3>
+            <p>Our team is here to support you with guidance, motivation, and encouragement as you work toward your goals.</p>
         </div>
-        <div class="core-value-card">
-            <h3>Results-Driven</h3>
-            <p>Our plans are built for real results, tailored to your unique fitness journey. We focus on actionable steps that deliver measurable improvements, helping you see results faster.</p>
+        <div class="mission-card">
+            <h3>Achieve Your Goals</h3>
+            <p>Our mission is to empower you to achieve your fitness and health goals with practical and effective strategies.</p>
         </div>
     </section>
 
