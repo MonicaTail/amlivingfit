@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>AM Living Fit - Meet Amanda</title>
+    <title>AM Living Fit - Amanda's Bio</title>
 
     <!-- Link to Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -68,28 +68,24 @@
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        /* Remove purple active state */
-        .nav-item.active {
-            background-color: transparent;  /* No background */
-            color: #ffffff; /* Maintain text color */
-        }
-
         .nav-item:hover {
             background-color: #34495e;
             border-radius: 5px;
             border: 2px solid white;
         }
 
-        /* Hero Section - Earthy Purple */
+        /* Hero Section - Replace with Amanda's picture */
         .hero {
-            background-color:#757171; /* Earthy purple */
+            background-image: url('amandapic.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 40px 0; /* Reduced padding */
+            padding: 40px 0;
             text-align: center;
         }
 
         .hero-text h1 {
-            font-size: 2.5em; /* Slightly smaller font size */
+            font-size: 2.5em;
             margin-bottom: 20px;
         }
 
@@ -98,42 +94,24 @@
             margin-bottom: 30px;
         }
 
-        /* Call to Action Section */
-        .cta-section {
+        /* Bio Information Section */
+        .bio-info {
+            background-color: #f7f9f8;
+            padding: 40px;
+            color: #333;
             text-align: center;
-            padding: 20px 0;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        .cta-section h2 {
+        .bio-info h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
 
-        .cta-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        /* Style for Buttons */
-        .cta-btn {
-            display: inline-block;
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            background-color: #34495e;
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        .bio-info p {
+            font-size: 1.3em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Footer Styles */
@@ -176,22 +154,13 @@
                 padding: 10px 20px;
             }
 
-            .cta-section h2 {
+            .bio-info h2 {
                 font-size: 2em;
             }
 
             .hero-text h1 {
                 font-size: 2.5em;
             }
-        }
-
-        /* Hero Image Styles */
-        .hero-image {
-            width: 250px; /* Adjust size as needed */
-            height: 250px;
-            border-radius: 50%; /* Circular image */
-            object-fit: cover;
-            margin-top: 20px;
         }
     </style>
 </head>
@@ -207,27 +176,27 @@
             <li><a href="bio.html" class="nav-item">Bio</a></li>
             <li><a href="packages.html" class="nav-item">Our Packages</a></li>
             <li><a href="mission.html" class="nav-item">Our Mission</a></li>
-            <li><a href="quiz.html" class="nav-item">Take the Quiz</a></li>
             <li><a href="register.html" class="nav-item">Register</a></li>
         </ul>
     </header>
 
-    <!-- Hero Section with Amanda's Picture -->
+    <!-- Hero Section (with Amanda's picture) -->
     <section class="hero">
         <div class="hero-text">
-            <img src="amandapic.jpg" alt="Amanda" class="hero-image">
-            <h1>Meet Amanda</h1>
-            <p>Fitness Instructor | Health Coach | Motivator</p>
+            <h1>Amanda's Bio</h1>
+            <p>Get to know our dedicated fitness instructor, Amanda.</p>
         </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-        <h2>Ready to Take the Next Step?</h2>
-        <p>Start your journey towards a healthier lifestyle today. Click below to take our quiz and get personalized recommendations!</p>
-        <a href="quiz.html" class="cta-btn">
-            Take the Quiz
-        </a>
+    <!-- Bio Information Section -->
+    <section class="bio-info">
+        <h2>Meet Amanda</h2>
+        <p>
+            Amanda is a passionate and experienced fitness instructor who has dedicated her life to helping others achieve their health and wellness goals. With years of experience in strength training, yoga, and holistic fitness, Amanda brings a personalized and balanced approach to every client.
+        </p>
+        <p>
+            Her philosophy centers on the belief that wellness goes beyond physical fitness—it’s about mental clarity, emotional balance, and community support. Amanda is committed to empowering individuals to embrace a lifestyle that nurtures the mind, body, and spirit.
+        </p>
     </section>
 
     <!-- Footer Section -->
