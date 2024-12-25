@@ -97,48 +97,10 @@
             margin-bottom: 30px;
         }
 
-        /* Call to Action Section */
-        .cta-section {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #fff;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-        }
-
-        .cta-section h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .cta-section p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        /* Style for Buttons */
-        .cta-btn {
-            display: inline-block;
-            background-color: #2c3e50; /* Same color as header */
-            color: white;
-            padding: 10px 20px;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            border: none;
-            border-radius: 50px; /* Round buttons */
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .cta-btn:hover {
-            background-color: #34495e;
-            transform: scale(1.05);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-
         /* Quiz Section */
         .quiz-section {
             text-align: center;
-            padding: 40px 20px;
+            padding: 20px 20px; /* Moved quiz section up closer to hero */
         }
 
         .quiz-section h2 {
@@ -151,20 +113,46 @@
             font-size: 1.3em;
         }
 
+        .quiz-question label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
         .quiz-option {
             display: block;
-            margin: 10px 0;
+            margin: 10px auto; /* Centered below the question */
             padding: 10px;
             background-color: #2c3e50;
             color: white;
             font-size: 1.1em;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
+            width: 80%; /* Reduced width to make it more compact */
         }
 
         .quiz-option:hover {
             background-color: #34495e;
+        }
+
+        /* Button Style */
+        .cta-btn {
+            display: inline-block;
+            background-color: #2c3e50; /* Same color as header */
+            color: white;
+            padding: 10px 20px; /* Smaller padding */
+            font-size: 1.1em; /* Slightly smaller text */
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px; /* Round buttons */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .cta-btn:hover {
+            background-color: #34495e; /* Lighter shade for hover effect */
+            transform: scale(1.05); /* Slightly grow the button */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
         }
 
         /* Recommendation Section */
@@ -188,54 +176,24 @@
             margin-bottom: 30px;
         }
 
-        /* Footer Styles */
-        footer {
-            background: linear-gradient(135deg, #2c3e50, #000000); /* Black gradient footer */
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
+        /* Footer Section */
+        <footer>
+        <div class="footer-content">
+            <div class="social-media-links">
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
+        </div>
+    </footer>
 
-        .social-media-links {
-            margin-bottom: 10px;
-        }
-
-        .social-icon {
-            margin: 0 15px;
-            font-size: 2em;
-            color: white;
-            transition: color 0.3s ease;
-            display: inline-block;
-        }
-
-        .social-icon:hover {
-            color: #3498db;
-        }
-
-        .footer-content p {
-            margin: 10px 0;
-        }
-
-        /* Mobile-Friendly Styles */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .cta-btn {
-                font-size: 16px;
-                padding: 10px 20px;
-            }
-
-            .cta-section h2 {
-                font-size: 2em;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5em;
-            }
-        }
     </style>
 </head>
 <body>
@@ -268,7 +226,6 @@
         <h2>Answer these questions to get your personalized plan</h2>
 
         <form action="quiz.html" method="post" id="quizForm">
-            <!-- Question 1 -->
             <div class="quiz-question">
                 <label for="fitness-level">How often do you work out?</label>
                 <select name="fitness-level" id="fitness-level">
@@ -278,7 +235,6 @@
                 </select>
             </div>
 
-            <!-- Question 2 -->
             <div class="quiz-question">
                 <label for="medical-conditions">Do you have any medical conditions?</label>
                 <select name="medical-conditions" id="medical-conditions">
@@ -287,96 +243,45 @@
                 </select>
             </div>
 
-            <!-- Question 3 -->
             <div class="quiz-question">
                 <label for="goal">What is your primary fitness goal?</label>
                 <select name="goal" id="goal">
                     <option value="weight-loss">Weight Loss</option>
                     <option value="muscle-gain">Muscle Gain</option>
-                    <option value="toning">Toning</option>
                     <option value="general-fitness">General Fitness</option>
                 </select>
             </div>
 
-            <!-- Question 4 -->
             <div class="quiz-question">
-                <label for="age">What is your age range?</label>
-                <select name="age" id="age">
-                    <option value="18-25">18-25</option>
-                    <option value="26-35">26-35</option>
-                    <option value="36-45">36-45</option>
-                    <option value="46-60">46-60</option>
-                    <option value="60+">60+</option>
-                </select>
+                <button type="submit" class="cta-btn">Submit</button>
             </div>
-
-            <!-- Question 5 -->
-            <div class="quiz-question">
-                <label for="activity-level">How would you describe your daily activity level?</label>
-                <select name="activity-level" id="activity-level">
-                    <option value="sedentary">Sedentary (little or no exercise)</option>
-                    <option value="light">Lightly active (light exercise or sports 1-3 days/week)</option>
-                    <option value="moderate">Moderately active (moderate exercise or sports 3-5 days/week)</option>
-                    <option value="very-active">Very active (hard exercise or sports 6-7 days/week)</option>
-                </select>
-            </div>
-
-            <!-- Question 6 -->
-            <div class="quiz-question">
-                <label for="preferred-workout">What type of workout do you enjoy the most?</label>
-                <select name="preferred-workout" id="preferred-workout">
-                    <option value="cardio">Cardio</option>
-                    <option value="strength">Strength Training</option>
-                    <option value="yoga">Yoga/Pilates</option>
-                    <option value="mixed">Mixed Routine</option>
-                </select>
-            </div>
-
-            <!-- Question 7 -->
-            <div class="quiz-question">
-                <label for="diet">Are you following any special diet?</label>
-                <select name="diet" id="diet">
-                    <option value="none">None</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="low-carb">Low Carb</option>
-                    <option value="keto">Keto</option>
-                </select>
-            </div>
-
-            <!-- Question 8 -->
-            <div class="quiz-question">
-                <label for="preferred-schedule">What is your preferred workout schedule?</label>
-                <select name="preferred-schedule" id="preferred-schedule">
-                    <option value="morning">Morning</option>
-                    <option value="afternoon">Afternoon</option>
-                    <option value="evening">Evening</option>
-                    <option value="any-time">Anytime</option>
-                </select>
-            </div>
-
-            <button type="submit" class="cta-btn">Submit</button>
         </form>
     </section>
 
-    <!-- Recommendation Section -->
+    <!-- Recommendation Section (Initially Hidden) -->
     <section class="recommendation-section" id="recommendationSection">
-        <h2>Your Personalized Fitness Plan</h2>
-        <p>We recommend the following plan based on your answers!</p>
-        <button class="cta-btn" onclick="window.location.href='purchase.html'">Purchase Recommended Package</button>
+        <h2>Recommended Plan</h2>
+        <p>Based on your answers, we recommend our <strong>Weight Loss Plan</strong> to help you achieve your fitness goals!</p>
+        <p>Ready to start? <button class="cta-btn">Purchase Now</button></p>
     </section>
 
-   <!-- Footer with Social Media Links -->
-<footer>
-    <div class="social-media-links">
-        <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook"></i></a>
-        <a href="https://twitter.com" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
-    </div>
-    <div class="footer-content">
-        <p>© 2024 AM Living Fit. All rights reserved.</p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media-links">
+                <a href="https://www.facebook.com" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:info@livingfit.com" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+123456789" class="social-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+            <p>© 2024 AM Living Fit. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
